@@ -1,0 +1,129 @@
+=head1 NAME
+
+Config::Model::models::LCDd::glcd - Configuration class LCDd::glcd
+
+=head1 VERSION
+
+version 0.001
+
+=head1 DESCRIPTION
+
+Configuration classes used by L<Config::Model>
+
+generated from LCDd.conf
+
+=head1 Elements
+
+=head2 Brightness
+
+Set brightness of the backlight if the backlight is switched 'on'.I<< Optional. Type integer. upstream_default: '800'.  >>
+
+=head2 CellSize
+
+Width and height of a character cell in pixels. This value is only used if
+the driver has been compiled with FreeType and it is enabled. Otherwise the
+default 6x8 cell is used.I<< Optional. Type uniline. default: '12x16'.  >>
+
+=head2 ConnectionType
+
+Select what type of connection. See documentation for types.I<< Optional. Type uniline. default: 't6963'.  >>
+
+=head2 Contrast
+
+Set the initial contrast if supported by connection type.I<< Optional. Type integer. upstream_default: '600'.  >>
+
+=head2 KeyMap_A
+
+Assign key strings to keys. There may be up to 16 keys numbered 'A' to 'Z'.
+By default keys 'A' to 'F' are assigned Up, Down, Left, Right, Enter, Escape.I<< Optional. Type uniline. default: 'Up'.  >>
+
+=head2 KeyMap_B
+
+I<< Optional. Type uniline. default: 'Down'.  >>
+
+=head2 KeyMap_C
+
+I<< Optional. Type uniline. default: 'Enter'.  >>
+
+=head2 KeyMap_D
+
+I<< Optional. Type uniline. default: 'Escape'.  >>
+
+=head2 KeyRepeatDelay
+
+Time (ms) from first key report to first repeat. Set to 0 to disable repeated
+key reports. I<< Optional. Type integer. upstream_default: '500'.  >>
+
+=head2 KeyRepeatInterval
+
+Time (ms) between repeated key reports. Ignored if KeyRepeatDelay is disabled
+(set to zero). I<< Optional. Type integer. upstream_default: '300'.  >>
+
+=head2 OffBrightness
+
+Set brightness of the backlight if the backlight is switched 'off'. Set this
+to zero to completely turn off the backlight. I<< Optional. Type integer. upstream_default: '100'.  >>
+
+=head2 Port
+
+t6963: Parallel port to use I<< Optional. Type uniline. upstream_default: '0x378'.  >>
+
+=head2 Size
+
+Width and height of the display in pixel. The supported sizes may depend on
+the ConnectionType. I<< Optional. Type uniline. upstream_default: '128x64'.  >>
+
+=head2 bidirectional
+
+t6963: Use LPT port in bi-directional mode. This should work on most LPT port
+and is required for proper timing! I<< Optional. Type enum. choice: 'yes', 'no'. upstream_default: 'yes'.  >>
+
+=head2 delayBus
+
+t6963: Insert additional delays into reads / writes. I<< Optional. Type enum. choice: 'yes', 'no'. upstream_default: 'no'.  >>
+
+=head2 fontHasIcons
+
+Some fonts miss the Unicode characters used to represent icons. In this case
+the built-in 5x8 font can used if this option is turned off. I<< Optional. Type enum. choice: 'yes', 'no'. upstream_default: 'yes'.  >>
+
+=head2 normal_font
+
+Path to font file to use for FreeType rendering. This font must be monospace
+and should contain some special Unicode characters like arrows (Andale Mono
+is recommended and can be fetched at http://corefonts.sf.net).I<< Optional. Type uniline. default: '/usr/local/lib/X11/fonts/TTF/andalemo.ttf'.  >>
+
+=head2 serdisp_device
+
+serdisplib: The display device to use, e.g. serraw:/dev/ttyS0,
+parport:/dev/parport0 or USB:07c0/1501.I<< Optional. Type uniline. default: '/dev/ppi0'.  >>
+
+=head2 serdisp_name
+
+serdisplib: Name of the underlying serdisplib driver, e.g. ctinclud. See
+serdisplib documentation for details.I<< Optional. Type uniline. default: 't6963'.  >>
+
+=head2 serdisp_options
+
+serdisplib: Options string to pass to serdisplib during initialization. Use
+this to set any display related options (e.g. wiring). The display size is
+always set based on the Size configured above! By default, no options are
+set.
+Important: The value must be quoted as it contains equal signs!I<< Optional. Type uniline. default: 'INVERT'.  >>
+
+=head2 useFT2
+
+If LCDproc has been compiled with FreeType 2 support this option can be used
+to turn if off intentionally. I<< Optional. Type enum. choice: 'yes', 'no'. upstream_default: 'yes'.  >>
+
+=head1 SEE ALSO
+
+=over
+
+=item *
+
+L<cme>
+
+=back
+
+=cut
