@@ -48,8 +48,8 @@ This model does not support to load several drivers. Loading several drivers is 
     ],
     'name' => 'LCDd',
     'copyright' => [
-      '2011, Dominique Dumont',
-      '1999-2011, William Ferrell and others'
+      '2011-2013, Dominique Dumont',
+      '1999-2013, William Ferrell and others'
     ],
     'license' => 'GPL-2',
     'element' => [
