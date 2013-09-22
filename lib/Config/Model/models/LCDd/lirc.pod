@@ -4,7 +4,7 @@ Config::Model::models::LCDd::lirc - Configuration class LCDd::lirc
 
 =head1 VERSION
 
-version 2.039
+version 2.040
 
 =head1 DESCRIPTION
 
@@ -16,11 +16,12 @@ generated from LCDd.conf
 
 =head2 lircrc
 
-Specify an alternative location of the lircrc file I<< Optional. Type uniline. upstream_default: '~/.lircrc'.  >>
+Specify an alternative location of the lircrc file 
+[default: /etc/lircrc.lcdproc]I<< Optional. Type uniline. upstream_default: '~/.lircrc'.  >> 
 
 =head2 prog
 
-Must be the same as in your lircrc. I<< Optional. Type uniline. default: 'lcdd'.  >>
+Must be the same as in your lircrc. I<< Optional. Type uniline. upstream_default: 'lcdd'.  >> 
 
 =head1 SEE ALSO
 

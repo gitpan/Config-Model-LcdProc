@@ -10,24 +10,24 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::IrMan',
     'element' => [
       'Config',
       {
-        'value_type' => 'uniline',
-        'default' => '/etc/irman.cfg',
+        'description' => 'Select the configuration file to use',
         'type' => 'leaf',
-        'description' => 'Select the configuration file to use'
+        'upstream_default' => '/etc/irman.cfg',
+        'value_type' => 'uniline'
       },
       'Device',
       {
-        'value_type' => 'uniline',
-        'default' => '/dev/irman',
-        'type' => 'leaf',
         'description' => 'in case of trouble with IrMan, try the Lirc emulator for IrMan
-Select the input device to use'
+Select the input device to use',
+        'type' => 'leaf',
+        'upstream_default' => '/dev/irman',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::IrMan'
   }
 ]
 ;

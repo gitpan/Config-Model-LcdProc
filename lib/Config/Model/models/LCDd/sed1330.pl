@@ -10,42 +10,42 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::sed1330',
     'element' => [
       'CellSize',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '6x10',
+        'description' => 'Width x Height of a character cell in pixels ',
         'type' => 'leaf',
-        'description' => 'Width x Height of a character cell in pixels '
+        'upstream_default' => '6x10',
+        'value_type' => 'uniline'
       },
       'ConnectionType',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'classic',
-        'type' => 'leaf',
-        'description' => 'Select what type of connection ',
         'choice' => [
           'classic',
           'bitshaker'
-        ]
+        ],
+        'description' => 'Select what type of connection ',
+        'type' => 'leaf',
+        'upstream_default' => 'classic',
+        'value_type' => 'enum'
       },
       'Port',
       {
-        'value_type' => 'uniline',
         'default' => '0x378',
+        'description' => 'Port where the LPT is. Common values are 0x278, 0x378 and 0x3BC',
         'type' => 'leaf',
-        'description' => 'Port where the LPT is. Common values are 0x278, 0x378 and 0x3BC'
+        'value_type' => 'uniline'
       },
       'Type',
       {
-        'value_type' => 'uniline',
         'default' => 'G321D',
-        'type' => 'leaf',
         'description' => 'Type of LCD module (legal: G321D, G121C, G242C, G191D, G2446, SP14Q002)
-Note: Currently only tested with G321D & SP14Q002.'
+Note: Currently only tested with G321D & SP14Q002.',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::sed1330'
   }
 ]
 ;

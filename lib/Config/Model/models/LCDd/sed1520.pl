@@ -10,52 +10,52 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::sed1520',
     'element' => [
       'DelayMult',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '1',
-        'max' => '1000',
-        'type' => 'leaf',
         'description' => 'On fast machines it may be necessary to slow down transfer to the display.
 If this value is set to zero, delay is disabled. Any value greater than
-zero slows down each write by one microsecond. '
+zero slows down each write by one microsecond. ',
+        'max' => '1000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '1',
+        'value_type' => 'integer'
       },
       'InterfaceType',
       {
-        'value_type' => 'enum',
-        'upstream_default' => '80',
-        'type' => 'leaf',
-        'description' => 'Select the interface type (wiring) for the display. Supported values are
-68 for 68-style connection (RESET level high) and 80 for 80-style connection
-(RESET level low). ',
         'choice' => [
           '68',
           '80'
-        ]
+        ],
+        'description' => 'Select the interface type (wiring) for the display. Supported values are
+68 for 68-style connection (RESET level high) and 80 for 80-style connection
+(RESET level low). ',
+        'type' => 'leaf',
+        'upstream_default' => '80',
+        'value_type' => 'enum'
       },
       'Port',
       {
-        'value_type' => 'uniline',
         'default' => '0x378',
+        'description' => 'Port where the LPT is. Usual values are 0x278, 0x378 and 0x3BC',
         'type' => 'leaf',
-        'description' => 'Port where the LPT is. Usual values are 0x278, 0x378 and 0x3BC'
+        'value_type' => 'uniline'
       },
       'haveInverter',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'yes',
-        'type' => 'leaf',
         'description' => 'The original wiring used an inverter to drive the control lines. If you do
 not use an inverter set haveInverter to no. ',
-        'choice' => [
-          'yes',
-          'no'
+        'type' => 'leaf',
+        'upstream_default' => 'yes',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       }
-    ]
+    ],
+    'name' => 'LCDd::sed1520'
   }
 ]
 ;

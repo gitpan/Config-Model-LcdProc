@@ -10,21 +10,16 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::sli',
     'element' => [
       'Device',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '/dev/lcd',
+        'description' => 'Select the output device to use ',
         'type' => 'leaf',
-        'description' => 'Select the output device to use '
+        'upstream_default' => '/dev/lcd',
+        'value_type' => 'uniline'
       },
       'Speed',
       {
-        'value_type' => 'enum',
-        'upstream_default' => '19200',
-        'type' => 'leaf',
-        'description' => 'Set the communication speed ',
         'choice' => [
           '1200',
           '2400',
@@ -33,9 +28,14 @@
           '38400',
           '57600',
           '115200'
-        ]
+        ],
+        'description' => 'Set the communication speed ',
+        'type' => 'leaf',
+        'upstream_default' => '19200',
+        'value_type' => 'enum'
       }
-    ]
+    ],
+    'name' => 'LCDd::sli'
   }
 ]
 ;

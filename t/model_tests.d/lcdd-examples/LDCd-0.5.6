@@ -58,7 +58,7 @@ Bind=127.0.0.1
 # Listen on this specified port; defaults to 13666.
 Port=13666
 
-# Sets the reporting level; [ default: 2 ] (warnings and errors only).
+# Sets the reporting level; defaults to 2 (warnings and errors only).
 #ReportLevel=3
 
 # Should we report to syslog instead of stderr ? [default: no; legal: yes, no]
@@ -68,7 +68,7 @@ Port=13666
 # and run as this user instead.
 User=nobody
 
-# The server will stay in the foreground if set to true [ default: no;  legal: yes, no].
+# The server will stay in the foreground if set to true.
 #Foreground=no
 
 # Hello message: each entry represents a display line; default: builtin
@@ -311,6 +311,7 @@ OffBrightness=0
 [EyeboxOne]
 
 # Select the output device to use [default: /dev/ttyS1]
+#Device=/dev/cua01
 Device=/dev/ttyS1
 
 # Set the display size [default: 20x4]

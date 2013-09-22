@@ -59,7 +59,7 @@ my $build = $class->new(
     'Module::Build' => '0.34'
   },
   'requires' => {
-    'Config::Model' => '2.037',
+    'Config::Model' => '2.043',
     'Exception::Class' => '0',
     'Log::Log4perl' => '1.11',
     'Mouse' => '0',

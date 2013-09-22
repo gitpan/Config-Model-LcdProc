@@ -4,7 +4,7 @@ Config::Model::models::LCDd::tyan - Configuration class LCDd::tyan
 
 =head1 VERSION
 
-version 2.039
+version 2.040
 
 =head1 DESCRIPTION
 
@@ -16,15 +16,15 @@ generated from LCDd.conf
 
 =head2 Device
 
-Select the output device to use I<< Optional. Type uniline. upstream_default: '/dev/lcd'.  >>
+Select the output device to use I<< Optional. Type uniline. upstream_default: '/dev/lcd'.  >> 
 
 =head2 Size
 
-set display size I<< Optional. Type uniline. upstream_default: '16x2'.  >>
+set display size I<< Optional. Type uniline. upstream_default: '16x2'.  >> 
 
 =head2 Speed
 
-Set the communication speed I<< Optional. Type enum. choice: '4800', '9600'. upstream_default: '9600'.  >>
+Set the communication speed I<< Optional. Type enum. choice: '4800', '9600'. upstream_default: '9600'.  >> 
 
 =head1 SEE ALSO
 

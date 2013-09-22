@@ -10,34 +10,34 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::tyan',
     'element' => [
       'Device',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '/dev/lcd',
+        'description' => 'Select the output device to use ',
         'type' => 'leaf',
-        'description' => 'Select the output device to use '
+        'upstream_default' => '/dev/lcd',
+        'value_type' => 'uniline'
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '16x2',
+        'description' => 'set display size ',
         'type' => 'leaf',
-        'description' => 'set display size '
+        'upstream_default' => '16x2',
+        'value_type' => 'uniline'
       },
       'Speed',
       {
-        'value_type' => 'enum',
-        'upstream_default' => '9600',
-        'type' => 'leaf',
-        'description' => 'Set the communication speed ',
         'choice' => [
           '4800',
           '9600'
-        ]
+        ],
+        'description' => 'Set the communication speed ',
+        'type' => 'leaf',
+        'upstream_default' => '9600',
+        'value_type' => 'enum'
       }
-    ]
+    ],
+    'name' => 'LCDd::tyan'
   }
 ]
 ;

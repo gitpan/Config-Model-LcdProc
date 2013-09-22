@@ -10,21 +10,21 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::lcterm',
     'element' => [
       'Device',
       {
-        'value_type' => 'uniline',
         'default' => '/dev/ttyS1',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'Size',
       {
-        'value_type' => 'uniline',
         'default' => '16x2',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::lcterm'
   }
 ]
 ;

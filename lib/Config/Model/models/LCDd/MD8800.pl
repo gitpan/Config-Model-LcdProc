@@ -10,43 +10,45 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::MD8800',
     'element' => [
       'Brightness',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '1000',
+        'description' => 'Set the initial brightness ',
         'max' => '1000',
+        'min' => '0',
         'type' => 'leaf',
-        'description' => 'Set the initial brightness '
+        'upstream_default' => '1000',
+        'value_type' => 'integer'
       },
       'Device',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '/dev/ttyS1',
+        'description' => 'device to use 
+[default: /dev/ttyS1]',
         'type' => 'leaf',
-        'description' => 'device to use '
+        'upstream_default' => '/dev/ttyS1',
+        'value_type' => 'uniline'
       },
       'OffBrightness',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '0',
-        'max' => '1000',
-        'type' => 'leaf',
         'description' => 'Set the initial off-brightness 
 This value is used when the display is normally
-switched off in case LCDd is inactive'
+switched off in case LCDd is inactive',
+        'max' => '1000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '0',
+        'value_type' => 'integer'
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '16x2',
+        'description' => 'display size 
+[default: 16x2]',
         'type' => 'leaf',
-        'description' => 'display size '
+        'upstream_default' => '16x2',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::MD8800'
   }
 ]
 ;

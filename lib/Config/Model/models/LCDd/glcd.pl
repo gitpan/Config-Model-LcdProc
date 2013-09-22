@@ -10,197 +10,210 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::glcd',
     'element' => [
       'Brightness',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '800',
+        'description' => 'Set brightness of the backlight if the backlight is switched \'on\'.
+
+[default: 1000]',
         'max' => '1000',
+        'min' => '0',
         'type' => 'leaf',
-        'description' => 'Set brightness of the backlight if the backlight is switched \'on\'.'
+        'upstream_default' => '800',
+        'value_type' => 'integer'
       },
       'CellSize',
       {
-        'value_type' => 'uniline',
-        'default' => '12x16',
-        'type' => 'leaf',
         'description' => 'Width and height of a character cell in pixels. This value is only used if
 the driver has been compiled with FreeType and it is enabled. Otherwise the
-default 6x8 cell is used.'
+default 6x8 cell is used.',
+        'type' => 'leaf',
+        'upstream_default' => '12x16',
+        'value_type' => 'uniline'
       },
       'ConnectionType',
       {
-        'value_type' => 'uniline',
         'default' => 't6963',
+        'description' => 'Select what type of connection. See documentation for types.',
         'type' => 'leaf',
-        'description' => 'Select what type of connection. See documentation for types.'
+        'value_type' => 'uniline'
       },
       'Contrast',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '600',
+        'description' => 'Set the initial contrast if supported by connection type.
+
+[default: 600]',
         'max' => '1000',
+        'min' => '0',
         'type' => 'leaf',
-        'description' => 'Set the initial contrast if supported by connection type.'
+        'upstream_default' => '600',
+        'value_type' => 'integer'
       },
       'KeyMap_A',
       {
-        'value_type' => 'uniline',
         'default' => 'Up',
-        'type' => 'leaf',
         'description' => 'Assign key strings to keys. There may be up to 16 keys numbered \'A\' to \'Z\'.
-By default keys \'A\' to \'F\' are assigned Up, Down, Left, Right, Enter, Escape.'
+By default keys \'A\' to \'F\' are assigned Up, Down, Left, Right, Enter, Escape.',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'KeyMap_B',
       {
-        'value_type' => 'uniline',
         'default' => 'Down',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'KeyMap_C',
       {
-        'value_type' => 'uniline',
         'default' => 'Enter',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'KeyMap_D',
       {
-        'value_type' => 'uniline',
         'default' => 'Escape',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'KeyRepeatDelay',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '500',
-        'max' => '3000',
-        'type' => 'leaf',
         'description' => 'Time (ms) from first key report to first repeat. Set to 0 to disable repeated
-key reports. '
+key reports. 
+[default: 500]',
+        'max' => '3000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '500',
+        'value_type' => 'integer'
       },
       'KeyRepeatInterval',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '300',
-        'max' => '3000',
-        'type' => 'leaf',
         'description' => 'Time (ms) between repeated key reports. Ignored if KeyRepeatDelay is disabled
-(set to zero). '
+(set to zero). 
+[default: 300]',
+        'max' => '3000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '300',
+        'value_type' => 'integer'
       },
       'OffBrightness',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '100',
-        'max' => '1000',
-        'type' => 'leaf',
         'description' => 'Set brightness of the backlight if the backlight is switched \'off\'. Set this
-to zero to completely turn off the backlight. '
+to zero to completely turn off the backlight. 
+[default: 0]',
+        'max' => '1000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '100',
+        'value_type' => 'integer'
       },
       'Port',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '0x378',
+        'description' => 't6963: Parallel port to use 
+[default: 0x378]',
         'type' => 'leaf',
-        'description' => 't6963: Parallel port to use '
+        'upstream_default' => '0x378',
+        'value_type' => 'uniline'
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '128x64',
-        'type' => 'leaf',
         'description' => 'Width and height of the display in pixel. The supported sizes may depend on
-the ConnectionType. '
+the ConnectionType. 
+[default: 128x64]',
+        'type' => 'leaf',
+        'upstream_default' => '128x64',
+        'value_type' => 'uniline'
       },
       'bidirectional',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'yes',
-        'type' => 'leaf',
         'description' => 't6963: Use LPT port in bi-directional mode. This should work on most LPT port
-and is required for proper timing! ',
-        'choice' => [
-          'yes',
-          'no'
+and is required for proper timing! 
+[default: yes]',
+        'type' => 'leaf',
+        'upstream_default' => 'yes',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'delayBus',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'no',
+        'description' => 't6963: Insert additional delays into reads / writes. 
+[default: no]',
         'type' => 'leaf',
-        'description' => 't6963: Insert additional delays into reads / writes. ',
-        'choice' => [
-          'yes',
-          'no'
+        'upstream_default' => 'no',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'fontHasIcons',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'yes',
-        'type' => 'leaf',
         'description' => 'Some fonts miss the Unicode characters used to represent icons. In this case
-the built-in 5x8 font can used if this option is turned off. ',
-        'choice' => [
-          'yes',
-          'no'
+the built-in 5x8 font can used if this option is turned off. 
+[default: no]',
+        'type' => 'leaf',
+        'upstream_default' => 'yes',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'normal_font',
       {
-        'value_type' => 'uniline',
-        'default' => '/usr/local/lib/X11/fonts/TTF/andalemo.ttf',
-        'type' => 'leaf',
         'description' => 'Path to font file to use for FreeType rendering. This font must be monospace
 and should contain some special Unicode characters like arrows (Andale Mono
-is recommended and can be fetched at http://corefonts.sf.net).'
+is recommended and can be fetched at http://corefonts.sf.net).',
+        'type' => 'leaf',
+        'upstream_default' => '/usr/local/lib/X11/fonts/TTF/andalemo.ttf',
+        'value_type' => 'uniline'
       },
       'serdisp_device',
       {
-        'value_type' => 'uniline',
         'default' => '/dev/ppi0',
-        'type' => 'leaf',
         'description' => 'serdisplib: The display device to use, e.g. serraw:/dev/ttyS0,
-parport:/dev/parport0 or USB:07c0/1501.'
+parport:/dev/parport0 or USB:07c0/1501.',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'serdisp_name',
       {
-        'value_type' => 'uniline',
         'default' => 't6963',
-        'type' => 'leaf',
         'description' => 'serdisplib: Name of the underlying serdisplib driver, e.g. ctinclud. See
-serdisplib documentation for details.'
+serdisplib documentation for details.',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'serdisp_options',
       {
-        'value_type' => 'uniline',
-        'default' => 'INVERT',
-        'type' => 'leaf',
         'description' => 'serdisplib: Options string to pass to serdisplib during initialization. Use
 this to set any display related options (e.g. wiring). The display size is
 always set based on the Size configured above! By default, no options are
 set.
-Important: The value must be quoted as it contains equal signs!'
+Important: The value must be quoted as it contains equal signs!',
+        'type' => 'leaf',
+        'upstream_default' => 'INVERT=1',
+        'value_type' => 'uniline'
       },
       'useFT2',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'yes',
-        'type' => 'leaf',
         'description' => 'If LCDproc has been compiled with FreeType 2 support this option can be used
-to turn if off intentionally. ',
-        'choice' => [
-          'yes',
-          'no'
+to turn if off intentionally. 
+[default: no]',
+        'type' => 'leaf',
+        'upstream_default' => 'yes',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       }
-    ]
+    ],
+    'name' => 'LCDd::glcd'
   }
 ]
 ;

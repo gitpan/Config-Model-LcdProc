@@ -10,16 +10,16 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::text',
     'element' => [
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '20x4',
+        'description' => 'Set the display size ',
         'type' => 'leaf',
-        'description' => 'Set the display size '
+        'upstream_default' => '20x4',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::text'
   }
 ]
 ;

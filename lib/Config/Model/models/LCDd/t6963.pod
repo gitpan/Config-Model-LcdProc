@@ -4,7 +4,7 @@ Config::Model::models::LCDd::t6963 - Configuration class LCDd::t6963
 
 =head1 VERSION
 
-version 2.039
+version 2.040
 
 =head1 DESCRIPTION
 
@@ -16,24 +16,27 @@ generated from LCDd.conf
 
 =head2 ClearGraphic
 
-Clear graphic memory on start-up. I<< Optional. Type enum. choice: 'yes', 'no'. upstream_default: 'no'.  >>
+Clear graphic memory on start-up. 
+[default: no]I<< Optional. Type boolean. upstream_default: 'no'.  >> 
 
 =head2 Port
 
-port to use I<< Optional. Type uniline. upstream_default: '0x378'.  >>
+port to use I<< Optional. Type uniline. upstream_default: '0x378'.  >> 
 
 =head2 Size
 
-set display size in pixels I<< Optional. Type uniline. upstream_default: '128x64'.  >>
+set display size in pixels I<< Optional. Type uniline. upstream_default: '128x64'.  >> 
 
 =head2 bidirectional
 
 Use LPT port in bi-directional mode. This should work on most LPT port and
-is required for proper timing! I<< Optional. Type enum. choice: 'yes', 'no'. upstream_default: 'yes'.  >>
+is required for proper timing! 
+[default: yes]I<< Optional. Type boolean. upstream_default: 'yes'.  >> 
 
 =head2 delayBus
 
-Insert additional delays into reads / writes. I<< Optional. Type enum. choice: 'yes', 'no'. upstream_default: 'no'.  >>
+Insert additional delays into reads / writes. 
+[default: no]I<< Optional. Type boolean. upstream_default: 'no'.  >> 
 
 =head1 SEE ALSO
 

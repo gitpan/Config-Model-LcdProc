@@ -10,50 +10,50 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::menu',
     'element' => [
       'DownKey',
       {
-        'value_type' => 'uniline',
         'default' => 'Down',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'EnterKey',
       {
-        'value_type' => 'uniline',
         'default' => 'Enter',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'LeftKey',
       {
-        'value_type' => 'uniline',
-        'default' => 'Left',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'upstream_default' => 'Left',
+        'value_type' => 'uniline'
       },
       'MenuKey',
       {
-        'value_type' => 'uniline',
         'default' => 'Escape',
-        'type' => 'leaf',
         'description' => 'You can configure what keys the menu should use. Note that the MenuKey
 will be reserved exclusively, the others work in shared mode.
 Up to six keys are supported. The MenuKey (to enter and exit the menu), the
 EnterKey (to select values) and at least one movement keys are required.
-These are the default key assignments:'
+These are the default key assignments:',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'RightKey',
       {
-        'value_type' => 'uniline',
-        'default' => 'Right',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'upstream_default' => 'Right',
+        'value_type' => 'uniline'
       },
       'UpKey',
       {
-        'value_type' => 'uniline',
         'default' => 'Up',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::menu'
   }
 ]
 ;

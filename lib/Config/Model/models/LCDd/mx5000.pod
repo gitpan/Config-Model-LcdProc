@@ -4,7 +4,7 @@ Config::Model::models::LCDd::mx5000 - Configuration class LCDd::mx5000
 
 =head1 VERSION
 
-version 2.039
+version 2.040
 
 =head1 DESCRIPTION
 
@@ -16,11 +16,11 @@ generated from LCDd.conf
 
 =head2 Device
 
-Select the output device to use I<< Optional. Type uniline. upstream_default: '/dev/hiddev0'.  >>
+Select the output device to use I<< Optional. Type uniline. upstream_default: '/dev/hiddev0'.  >> 
 
 =head2 WaitAfterRefresh
 
-Time to wait in ms after the refresh screen has been sent I<< Optional. Type uniline. upstream_default: '1000'.  >>
+Time to wait in ms after the refresh screen has been sent I<< Optional. Type uniline. upstream_default: '1000'.  >> 
 
 =head1 SEE ALSO
 

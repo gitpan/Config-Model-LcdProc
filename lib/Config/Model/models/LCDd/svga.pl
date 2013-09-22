@@ -10,54 +10,55 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::svga',
     'element' => [
       'Brightness',
       {
-        'value_type' => 'integer',
-        'min' => '1',
-        'upstream_default' => '1000',
+        'description' => 'Set the initial brightness ',
         'max' => '1000',
+        'min' => '1',
         'type' => 'leaf',
-        'description' => 'Set the initial brightness '
+        'upstream_default' => '1000',
+        'value_type' => 'integer'
       },
       'Contrast',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '500',
-        'max' => '1000',
-        'type' => 'leaf',
         'description' => 'Set the initial contrast 
-Can be set but does not change anything internally'
+Can be set but does not change anything internally',
+        'max' => '1000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '500',
+        'value_type' => 'integer'
       },
       'Mode',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => 'G320x240x256',
-        'type' => 'leaf',
         'description' => 'svgalib mode to use 
-legal values are supported svgalib modes'
+legal values are supported svgalib modes
+[default: G640x480x256]',
+        'type' => 'leaf',
+        'upstream_default' => 'G320x240x256',
+        'value_type' => 'uniline'
       },
       'OffBrightness',
       {
-        'value_type' => 'integer',
-        'min' => '1',
-        'upstream_default' => '500',
-        'max' => '1000',
-        'type' => 'leaf',
         'description' => 'Set the initial off-brightness 
 This value is used when the display is normally
-switched off in case LCDd is inactive'
+switched off in case LCDd is inactive',
+        'max' => '1000',
+        'min' => '1',
+        'type' => 'leaf',
+        'upstream_default' => '500',
+        'value_type' => 'integer'
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '20x4',
+        'description' => 'set display size ',
         'type' => 'leaf',
-        'description' => 'set display size '
+        'upstream_default' => '20x4',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::svga'
   }
 ]
 ;

@@ -10,23 +10,24 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::ms6931',
     'element' => [
       'Device',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '/dev/ttyS1',
+        'description' => 'device to use ',
         'type' => 'leaf',
-        'description' => 'device to use '
+        'upstream_default' => '/dev/ttyS1',
+        'value_type' => 'uniline'
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '16x2',
+        'description' => 'display size 
+[default: 16x2]',
         'type' => 'leaf',
-        'description' => 'display size '
+        'upstream_default' => '16x2',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::ms6931'
   }
 ]
 ;

@@ -4,7 +4,7 @@ Config::Model::models::LCDd::curses - Configuration class LCDd::curses
 
 =head1 VERSION
 
-version 2.039
+version 2.040
 
 =head1 DESCRIPTION
 
@@ -16,37 +16,37 @@ generated from LCDd.conf
 
 =head2 Background
 
-background color when "backlight" is off I<< Optional. Type uniline. upstream_default: 'cyan'.  >>
+background color when "backlight" is off I<< Optional. Type uniline. upstream_default: 'cyan'.  >> 
 
 =head2 Backlight
 
-background color when "backlight" is on I<< Optional. Type uniline. upstream_default: 'red'.  >>
+background color when "backlight" is on I<< Optional. Type uniline. upstream_default: 'red'.  >> 
 
 =head2 DrawBorder
 
-draw Border I<< Optional. Type enum. choice: 'yes', 'no'. upstream_default: 'yes'.  >>
+draw Border I<< Optional. Type boolean. upstream_default: 'yes'.  >> 
 
 =head2 Foreground
 
 color settings
-foreground color I<< Optional. Type uniline. upstream_default: 'blue'.  >>
+foreground color I<< Optional. Type uniline. upstream_default: 'blue'.  >> 
 
 =head2 Size
 
-display size I<< Optional. Type uniline. upstream_default: '20x4'.  >>
+display size I<< Optional. Type uniline. upstream_default: '20x4'.  >> 
 
 =head2 TopLeftX
 
 What position (X,Y) to start the left top corner at...
-Default: (7,7)I<< Optional. Type uniline. default: '7'.  >>
+Default: (7,7)I<< Optional. Type uniline. default: '7'.  >> 
 
 =head2 TopLeftY
 
-I<< Optional. Type uniline. default: '7'.  >>
+I<< Optional. Type uniline. default: '7'.  >> 
 
 =head2 UseACS
 
-use ASC symbols for icons & bars I<< Optional. Type enum. choice: 'yes', 'no'. upstream_default: 'no'.  >>
+use ASC symbols for icons & bars I<< Optional. Type boolean. upstream_default: 'no'.  >> 
 
 =head1 SEE ALSO
 

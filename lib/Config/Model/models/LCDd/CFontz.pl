@@ -10,89 +10,89 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::CFontz',
     'element' => [
       'Brightness',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '1000',
+        'description' => 'Set the initial brightness ',
         'max' => '1000',
+        'min' => '0',
         'type' => 'leaf',
-        'description' => 'Set the initial brightness '
+        'upstream_default' => '1000',
+        'value_type' => 'integer'
       },
       'Contrast',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '560',
+        'description' => 'Set the initial contrast ',
         'max' => '1000',
+        'min' => '0',
         'type' => 'leaf',
-        'description' => 'Set the initial contrast '
+        'upstream_default' => '560',
+        'value_type' => 'integer'
       },
       'Device',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '/dev/lcd',
+        'description' => 'Select the output device to use ',
         'type' => 'leaf',
-        'description' => 'Select the output device to use '
+        'upstream_default' => '/dev/lcd',
+        'value_type' => 'uniline'
       },
       'NewFirmware',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'no',
-        'type' => 'leaf',
         'description' => 'Set the firmware version (New means >= 2.0) ',
-        'choice' => [
-          'yes',
-          'no'
+        'type' => 'leaf',
+        'upstream_default' => 'no',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'OffBrightness',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '0',
-        'max' => '1000',
-        'type' => 'leaf',
         'description' => 'Set the initial off-brightness 
 This value is used when the display is normally
-switched off in case LCDd is inactive'
+switched off in case LCDd is inactive',
+        'max' => '1000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '0',
+        'value_type' => 'integer'
       },
       'Reboot',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'no',
-        'type' => 'leaf',
         'description' => 'Reinitialize the LCD\'s BIOS 
 normally you shouldn\'t need this',
-        'choice' => [
-          'yes',
-          'no'
+        'type' => 'leaf',
+        'upstream_default' => 'no',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '20x4',
+        'description' => 'Select the LCD size ',
         'type' => 'leaf',
-        'description' => 'Select the LCD size '
+        'upstream_default' => '20x4',
+        'value_type' => 'uniline'
       },
       'Speed',
       {
-        'value_type' => 'enum',
-        'upstream_default' => '9600',
-        'type' => 'leaf',
-        'description' => 'Set the communication speed ',
         'choice' => [
           '1200',
           '2400',
           '9600',
           '19200',
           '115200'
-        ]
+        ],
+        'description' => 'Set the communication speed ',
+        'type' => 'leaf',
+        'upstream_default' => '9600',
+        'value_type' => 'enum'
       }
-    ]
+    ],
+    'name' => 'LCDd::CFontz'
   }
 ]
 ;

@@ -26,8 +26,6 @@ push @fix_warnings,
      check => { 
        'server Hello:0',           qq!"  Bienvenue"! ,
        'server Hello:1',           qq("   LCDproc et Config::Model!") ,
-       'server GoodBye:0',           qq!"    GoodBye"! ,
-       'server GoodBye:1',           qq("    LCDproc!") ,
        'server Driver', 'curses',
        'curses Size', '20x2',
      },
@@ -36,6 +34,15 @@ push @fix_warnings,
             # qr/value 2 > max limit 0/ => 'fs:"/var/chroot/lenny-i386/dev" fs_passno=0' ,
         ],
     },
+    {   #test upgrade from raw lcdproc 0.5.5
+        name => 'LDCd-0.5.5',
+        load_check => 'skip'
+    },
+    {   # likewise for lcdproc 0.5.6
+        name => 'LDCd-0.5.6',
+        load_check => 'skip'
+    },
+    
 );
 
 1;

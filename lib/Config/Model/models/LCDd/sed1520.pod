@@ -4,7 +4,7 @@ Config::Model::models::LCDd::sed1520 - Configuration class LCDd::sed1520
 
 =head1 VERSION
 
-version 2.039
+version 2.040
 
 =head1 DESCRIPTION
 
@@ -18,22 +18,22 @@ generated from LCDd.conf
 
 On fast machines it may be necessary to slow down transfer to the display.
 If this value is set to zero, delay is disabled. Any value greater than
-zero slows down each write by one microsecond. I<< Optional. Type integer. upstream_default: '1'.  >>
+zero slows down each write by one microsecond. I<< Optional. Type integer. upstream_default: '1'.  >> 
 
 =head2 InterfaceType
 
 Select the interface type (wiring) for the display. Supported values are
 68 for 68-style connection (RESET level high) and 80 for 80-style connection
-(RESET level low). I<< Optional. Type enum. choice: '68', '80'. upstream_default: '80'.  >>
+(RESET level low). I<< Optional. Type enum. choice: '68', '80'. upstream_default: '80'.  >> 
 
 =head2 Port
 
-Port where the LPT is. Usual values are 0x278, 0x378 and 0x3BC. I<< Optional. Type uniline. default: '0x378'.  >>
+Port where the LPT is. Usual values are 0x278, 0x378 and 0x3BC. I<< Optional. Type uniline. default: '0x378'.  >> 
 
 =head2 haveInverter
 
 The original wiring used an inverter to drive the control lines. If you do
-not use an inverter set haveInverter to no. I<< Optional. Type enum. choice: 'yes', 'no'. upstream_default: 'yes'.  >>
+not use an inverter set haveInverter to no. I<< Optional. Type boolean. upstream_default: 'yes'.  >> 
 
 =head1 SEE ALSO
 

@@ -4,7 +4,7 @@ Config::Model::models::LCDd::irtrans - Configuration class LCDd::irtrans
 
 =head1 VERSION
 
-version 2.039
+version 2.040
 
 =head1 DESCRIPTION
 
@@ -16,15 +16,17 @@ generated from LCDd.conf
 
 =head2 Backlight
 
-Does the device have a backlight? I<< Optional. Type enum. choice: 'yes', 'no'. upstream_default: 'no'.  >>
+Does the device have a backlight? 
+[default: no]I<< Optional. Type boolean. upstream_default: 'no'.  >> 
 
 =head2 Hostname
 
-IRTrans device to connect to I<< Optional. Type uniline. upstream_default: 'localhost'.  >>
+IRTrans device to connect to 
+[default: localhost]I<< Optional. Type uniline. upstream_default: 'localhost'.  >> 
 
 =head2 Size
 
-display dimensions. I<< Optional. Type uniline. default: '16x2'.  >>
+display dimensions. I<< Optional. Type uniline. default: '16x2'.  >> 
 
 =head1 SEE ALSO
 

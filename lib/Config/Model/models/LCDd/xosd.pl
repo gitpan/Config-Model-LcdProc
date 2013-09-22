@@ -10,30 +10,30 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::xosd',
     'element' => [
       'Font',
       {
-        'value_type' => 'uniline',
         'default' => '-*-terminus-*-r-*-*-*-320-*-*-*-*-*',
+        'description' => 'X font to use, in XLFD format, as given by "xfontsel"',
         'type' => 'leaf',
-        'description' => 'X font to use, in XLFD format, as given by "xfontsel"'
+        'value_type' => 'uniline'
       },
       'Offset',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '0x0',
+        'description' => 'Offset in pixels from the top-left corner of the monitor ',
         'type' => 'leaf',
-        'description' => 'Offset in pixels from the top-left corner of the monitor '
+        'upstream_default' => '0x0',
+        'value_type' => 'uniline'
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '20x4',
+        'description' => 'set display size ',
         'type' => 'leaf',
-        'description' => 'set display size '
+        'upstream_default' => '20x4',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::xosd'
   }
 ]
 ;

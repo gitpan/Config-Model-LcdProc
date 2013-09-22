@@ -4,7 +4,7 @@ Config::Model::models::LCDd::lcdm001 - Configuration class LCDd::lcdm001
 
 =head1 VERSION
 
-version 2.039
+version 2.040
 
 =head1 DESCRIPTION
 
@@ -16,19 +16,19 @@ generated from LCDd.conf
 
 =head2 BackKey
 
-I<< Optional. Type uniline. default: 'UpKey'.  >>
+I<< Optional. Type uniline. default: 'UpKey'.  >> 
 
 =head2 Device
 
-I<< Optional. Type uniline. default: '/dev/ttyS1'.  >>
+I<< Optional. Type uniline. default: '/dev/ttyS1'.  >> 
 
 =head2 ForwardKey
 
-I<< Optional. Type uniline. default: 'DownKey'.  >>
+I<< Optional. Type uniline. default: 'DownKey'.  >> 
 
 =head2 MainMenuKey
 
-I<< Optional. Type uniline. default: 'RightKey'.  >>
+I<< Optional. Type uniline. default: 'RightKey'.  >> 
 
 =head2 PauseKey
 
@@ -39,7 +39,7 @@ Keyname      Function
 PauseKey     Pause/Continue              Enter/select
 BackKey      Back(Go to previous screen) Up/Left
 ForwardKey   Forward(Go to next screen)  Down/Right
-MainMenuKey  Open main menu              Exit/Cancel. I<< Optional. Type uniline. default: 'LeftKey'.  >>
+MainMenuKey  Open main menu              Exit/Cancel. I<< Optional. Type uniline. default: 'LeftKey'.  >> 
 
 =head1 SEE ALSO
 

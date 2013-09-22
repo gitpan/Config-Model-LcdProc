@@ -10,113 +10,116 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::CFontzPacket',
     'element' => [
       'Brightness',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '1000',
+        'description' => 'Set the initial brightness ',
         'max' => '1000',
+        'min' => '0',
         'type' => 'leaf',
-        'description' => 'Set the initial brightness '
+        'upstream_default' => '1000',
+        'value_type' => 'integer'
       },
       'Contrast',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '560',
+        'description' => 'Set the initial contrast ',
         'max' => '1000',
+        'min' => '0',
         'type' => 'leaf',
-        'description' => 'Set the initial contrast '
+        'upstream_default' => '560',
+        'value_type' => 'integer'
       },
       'Device',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '/dev/lcd',
+        'description' => 'Select the output device to use ',
         'type' => 'leaf',
-        'description' => 'Select the output device to use '
+        'upstream_default' => '/dev/lcd',
+        'value_type' => 'uniline'
       },
       'Model',
       {
-        'value_type' => 'enum',
-        'upstream_default' => '633',
-        'type' => 'leaf',
-        'description' => 'Select the LCD model ',
         'choice' => [
           '533',
           '631',
           '633',
           '635'
-        ]
+        ],
+        'description' => 'Select the LCD model ',
+        'type' => 'leaf',
+        'upstream_default' => '633',
+        'value_type' => 'enum'
       },
       'OffBrightness',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '0',
-        'max' => '1000',
-        'type' => 'leaf',
         'description' => 'Set the initial off-brightness 
 This value is used when the display is normally
-switched off in case LCDd is inactive'
+switched off in case LCDd is inactive',
+        'max' => '1000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '0',
+        'value_type' => 'integer'
       },
       'OldFirmware',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'no',
-        'type' => 'leaf',
         'description' => 'Very old 633 firmware versions do not support partial screen updates using
 \'Send Data to LCD\' command (31). For those devices it may be necessary to
-enable this flag. ',
-        'choice' => [
-          'yes',
-          'no'
+enable this flag. 
+[default: yes]',
+        'type' => 'leaf',
+        'upstream_default' => 'no',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'Reboot',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'no',
-        'type' => 'leaf',
         'description' => 'Reinitialize the LCD\'s BIOS on driver start. ',
-        'choice' => [
-          'yes',
-          'no'
+        'type' => 'leaf',
+        'upstream_default' => 'no',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'default' => '20x4',
-        'type' => 'leaf',
         'description' => 'Override the LCD size known for the selected model. Usually setting this
-value should not be necessary.'
+value should not be necessary.',
+        'type' => 'leaf',
+        'upstream_default' => '20x4',
+        'value_type' => 'uniline'
       },
       'Speed',
       {
-        'value_type' => 'enum',
-        'type' => 'leaf',
-        'description' => 'Override the default communication speed known for the selected model.
-Default value depends on model ',
         'choice' => [
           '19200',
           '115200'
-        ]
+        ],
+        'description' => 'Override the default communication speed known for the selected model.
+Default value depends on model 
+[default: 115200]',
+        'type' => 'leaf',
+        'value_type' => 'enum'
       },
       'USB',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'no',
-        'type' => 'leaf',
         'description' => 'Enable the USB flag if the device is connected to an USB port. For
-serial ports leave it disabled. ',
-        'choice' => [
-          'yes',
-          'no'
+serial ports leave it disabled. 
+[default: yes]',
+        'type' => 'leaf',
+        'upstream_default' => 'no',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       }
-    ]
+    ],
+    'name' => 'LCDd::CFontzPacket'
   }
 ]
 ;

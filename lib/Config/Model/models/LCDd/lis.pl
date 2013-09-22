@@ -10,54 +10,59 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::lis',
     'element' => [
       'Brightness',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '1000',
-        'max' => '1000',
-        'type' => 'leaf',
         'description' => 'Set the initial brightness 
-0-250 = 25%, 251-500 = 50%, 501-750 = 75%, 751-1000 = 100%'
+0-250 = 25%, 251-500 = 50%, 501-750 = 75%, 751-1000 = 100%
+[default: 1000]',
+        'max' => '1000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '1000',
+        'value_type' => 'integer'
       },
       'Lastline',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'yes',
-        'type' => 'leaf',
         'description' => 'Specifies if the last line is pixel addressable (yes) or it only controls an
-underline effect (no). ',
-        'choice' => [
-          'yes',
-          'no'
+underline effect (no). 
+[default: yes]',
+        'type' => 'leaf',
+        'upstream_default' => 'yes',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'ProductID',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '0x6001',
-        'type' => 'leaf',
         'description' => 'USB Product ID 
-Change only if testing a compatible device.'
+Change only if testing a compatible device.
+[default: 0x6001]',
+        'type' => 'leaf',
+        'upstream_default' => '0x6001',
+        'value_type' => 'uniline'
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '20x2',
+        'description' => 'Columns by lines 
+[default: 20x2]',
         'type' => 'leaf',
-        'description' => 'Columns by lines '
+        'upstream_default' => '20x2',
+        'value_type' => 'uniline'
       },
       'VendorID',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '0x0403',
-        'type' => 'leaf',
         'description' => 'USB Vendor ID 
-Change only if testing a compatible device.'
+Change only if testing a compatible device.
+[default: 0x0403]',
+        'type' => 'leaf',
+        'upstream_default' => '0x0403',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::lis'
   }
 ]
 ;

@@ -10,82 +10,86 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::imonlcd',
     'element' => [
       'Backlight',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'on',
-        'type' => 'leaf',
-        'description' => 'Set the backlight state ',
         'choice' => [
           'on',
           'off'
-        ]
+        ],
+        'description' => 'Set the backlight state 
+[default: on]',
+        'type' => 'leaf',
+        'upstream_default' => 'on',
+        'value_type' => 'enum'
       },
       'Contrast',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '200',
+        'description' => 'Select the displays contrast ',
         'max' => '1000',
+        'min' => '0',
         'type' => 'leaf',
-        'description' => 'Select the displays contrast '
+        'upstream_default' => '200',
+        'value_type' => 'integer'
       },
       'Device',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '/dev/lcd0',
+        'description' => 'Select the output device to use ',
         'type' => 'leaf',
-        'description' => 'Select the output device to use '
+        'upstream_default' => '/dev/lcd0',
+        'value_type' => 'uniline'
       },
       'DiscMode',
       {
-        'value_type' => 'enum',
-        'upstream_default' => '0',
-        'type' => 'leaf',
-        'description' => 'Set the disc mode 
-0 => spin the "slim" disc - two disc segments,
-1 => their complement spinning;',
         'choice' => [
           '0',
           '1'
-        ]
+        ],
+        'description' => 'Set the disc mode 
+0 => spin the "slim" disc - two disc segments,
+1 => their complement spinning;
+[default: 0]',
+        'type' => 'leaf',
+        'upstream_default' => '0',
+        'value_type' => 'enum'
       },
       'OnExit',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '1',
-        'max' => '2',
-        'type' => 'leaf',
         'description' => 'Set the exit behavior 
 0 means leave shutdown message,
 1 means show the big clock,
-2 means blank device'
+2 means blank device
+[default: 2]',
+        'max' => '2',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '1',
+        'value_type' => 'integer'
       },
       'Protocol',
       {
-        'value_type' => 'enum',
-        'upstream_default' => '0',
-        'type' => 'leaf',
+        'choice' => [
+          '0',
+          '1'
+        ],
         'description' => 'Specify which iMon protocol should be used
 
 Choose 0 for 15c2:ffdc device,
 Choose 1 for 15c2:0038 device',
-        'choice' => [
-          '0',
-          '1'
-        ]
+        'type' => 'leaf',
+        'upstream_default' => '0',
+        'value_type' => 'enum'
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '96x16',
+        'description' => 'Specify the size of the display in pixels 
+[default: 96x16]',
         'type' => 'leaf',
-        'description' => 'Specify the size of the display in pixels '
+        'upstream_default' => '96x16',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::imonlcd'
   }
 ]
 ;

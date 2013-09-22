@@ -10,16 +10,16 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::ula200',
     'element' => [
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '20x4',
+        'description' => 'Select the LCD size ',
         'type' => 'leaf',
-        'description' => 'Select the LCD size '
+        'upstream_default' => '20x4',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::ula200'
   }
 ]
 ;

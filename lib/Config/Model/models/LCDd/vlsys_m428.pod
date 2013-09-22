@@ -4,7 +4,7 @@ Config::Model::models::LCDd::vlsys_m428 - Configuration class LCDd::vlsys_m428
 
 =head1 VERSION
 
-version 2.039
+version 2.040
 
 =head1 DESCRIPTION
 
@@ -16,7 +16,8 @@ generated from LCDd.conf
 
 =head2 Device
 
-Select the output device to use I<< Optional. Type uniline. upstream_default: '/dev/ttyUSB0'.  >>
+Select the output device to use 
+[default: /dev/ttyUSB0]I<< Optional. Type uniline. upstream_default: '/dev/ttyUSB0'.  >> 
 
 =head1 SEE ALSO
 

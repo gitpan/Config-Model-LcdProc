@@ -10,37 +10,34 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::lcdm001',
     'element' => [
       'BackKey',
       {
-        'value_type' => 'uniline',
         'default' => 'UpKey',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'Device',
       {
-        'value_type' => 'uniline',
         'default' => '/dev/ttyS1',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'ForwardKey',
       {
-        'value_type' => 'uniline',
         'default' => 'DownKey',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'MainMenuKey',
       {
-        'value_type' => 'uniline',
         'default' => 'RightKey',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'PauseKey',
       {
-        'value_type' => 'uniline',
         'default' => 'LeftKey',
-        'type' => 'leaf',
         'description' => 'keypad settings
 Keyname      Function
              Normal context              Menu context
@@ -48,9 +45,12 @@ Keyname      Function
 PauseKey     Pause/Continue              Enter/select
 BackKey      Back(Go to previous screen) Up/Left
 ForwardKey   Forward(Go to next screen)  Down/Right
-MainMenuKey  Open main menu              Exit/Cancel'
+MainMenuKey  Open main menu              Exit/Cancel',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::lcdm001'
   }
 ]
 ;

@@ -111,8 +111,8 @@ my @lines    = $lcd_file->getlines;
 
 # Here's the LCDd.conf pre-processing mentioned above
 
-# un-comment commented parameters
-foreach (@lines) { s/^#(\w+=)/$1/ }
+# un-comment commented parameters and put value as default value
+foreach (@lines) { s/^#(\w+)=(.*)/# [default: $2]\n$1=$2/ }
 
 # pre-processing is done.
 
@@ -195,7 +195,7 @@ $dispatch{_default_} = sub {
     my $square_model = '';
     
     my $square_rexp = '\[(\s*\w+\s*:[^\]]*)\]';
-    while ($$info_r =~ /$square_rexp/ ) {
+    if ($$info_r =~ /$square_rexp/ ) {
         my $info = $1 ;
         say "class $ini_class element $ini_param info: '$info'" if $verbose;
         $$info_r =~ s/$square_rexp//;
@@ -237,6 +237,11 @@ $dispatch{"LCDd::server"}{Driver} = sub {
     return $load;
 };
 
+# Ensure that DriverPath will end with a slash
+$dispatch{"LCDd::server"}{DriverPath} = sub {
+    return $dispatch{_default_}->( @_ ) . q! match="/$"! ;
+};
+
 # like default but ensure that parameter is integer
 $dispatch{"LCDd::server"}{WaitTime} = $dispatch{"LCDd::server"}{ReportLevel} =
  $dispatch{"LCDd::picolcd"}{LircFlushThreshold} = $dispatch{"LCDd::server"}{Port}   = sub {
@@ -247,13 +252,11 @@ $dispatch{"LCDd::server"}{WaitTime} = $dispatch{"LCDd::server"}{ReportLevel} =
 # special dispatch case
 my %override ;
 
-# ensure that default values are "Hello LCDproc" (or "GoodBye LCDproc")
+# Handle display content
 $override{"LCDd::server"}{GoodBye} = $override{"LCDd::server"}{Hello} = sub {
     my ( $class, $elt ) = @_;
     my $ret = qq( class:"$class" element:$elt type=list ) ;
-    $ret .= 'cargo type=leaf value_type=uniline - ' ;  
-    $ret .= 'default_with_init:0="\"    '.$elt.'\"" ' ; 
-    $ret .= 'default_with_init:1="\"    LCDproc!\""'; 
+    $ret .= 'cargo type=leaf value_type=uniline';
     return $ret ;
 };
 
@@ -363,28 +366,26 @@ sub info_to_model {
 
     # use this semantic information to better specify the parameter
     my $legal = delete $info{legal} || '';
-    given ($legal) {
-        when (/^(\d+)-(\d+)$/) { push @model, "value_type=integer min=$1 max=$2"}
-        when (/^([\w\,]+)$/)   { push @model, "value_type=enum choice=$1"}
-        default                { push @model, "value_type=$value_type"}
-    }
+    push @model,
+      $legal =~ /^(\d+)-(\d+)$/     ? "value_type=integer min=$1 max=$2"
+    : $legal =~ /^(yes,no|no,yes)$/ ? "value_type=boolean write_as=no,yes"
+    : $legal =~ /^([\w\,]+)$/       ? "value_type=enum    choice=$1"
+    :                                 "value_type=$value_type" ;
 
     foreach my $k (keys %info) {
         my $v = $info{$k} ;
         die "Undefined value. Something is wrong in info '$info'" unless defined $v ;
         $v = '"'.$v.'"' unless $v=~/^"/ ;
 
-        given ($k) {
-            when (/default/ ) {
-                # specify upstream default value if it was found in the comment
-                push @model ,qq!upstream_default=$v! if length($v);
-            }
-            when (/assert/ ) {
-                push @model ,qq!warn_unless:0 code=$v -!;
-            }
-            default {
-                push @model, "$k=$v" ;
-            }
+        if ($k =~ /default/ ) {
+            # specify upstream default value if it was found in the comment
+            push @model ,qq!upstream_default=$v! if length($v);
+        }
+        elsif ($k =~ /assert/ ) {
+            push @model ,qq!warn_unless:0 code=$v -!;
+        }
+        else {
+            push @model, "$k=$v" ;
         }
     }
 

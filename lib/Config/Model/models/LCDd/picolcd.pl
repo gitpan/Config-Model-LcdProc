@@ -10,113 +10,109 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::picolcd',
     'element' => [
       'Backlight',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'on',
-        'type' => 'leaf',
-        'description' => 'Sets the initial state of the backlight upon start-up.',
         'choice' => [
           'on',
           'off'
-        ]
+        ],
+        'description' => 'Sets the initial state of the backlight upon start-up.
+
+[default: on]',
+        'type' => 'leaf',
+        'upstream_default' => 'on',
+        'value_type' => 'enum'
       },
       'Brightness',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '1000',
-        'max' => '1000',
-        'type' => 'leaf',
         'description' => 'Set the initial brightness . Works only
-with the 20x4 device'
+with the 20x4 device',
+        'max' => '1000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '1000',
+        'value_type' => 'integer'
       },
       'Contrast',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '1000',
+        'description' => 'Set the initial contrast ',
         'max' => '1000',
+        'min' => '0',
         'type' => 'leaf',
-        'description' => 'Set the initial contrast '
+        'upstream_default' => '1000',
+        'value_type' => 'integer'
       },
       'Key0Light',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'on',
-        'type' => 'leaf',
+        'choice' => [
+          'on',
+          'off'
+        ],
         'description' => 'If Keylights is on, the you can unlight specific keys below:
 Key0 is the directional pad.  Key1 - Key5 correspond to the F1 - F5 keys.
 There is no LED for the +/- keys.  This is a handy way to indicate to users
 which keys are disabled.  ',
-        'choice' => [
-          'on',
-          'off'
-        ]
+        'type' => 'leaf',
+        'upstream_default' => 'on',
+        'value_type' => 'enum'
       },
       'Key1Light',
       {
-        'value_type' => 'uniline',
         'default' => 'on',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'Key2Light',
       {
-        'value_type' => 'uniline',
         'default' => 'on',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'Key3Light',
       {
-        'value_type' => 'uniline',
         'default' => 'on',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'Key4Light',
       {
-        'value_type' => 'uniline',
         'default' => 'on',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'Key5Light',
       {
-        'value_type' => 'uniline',
         'default' => 'on',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'KeyRepeatDelay',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '300',
-        'max' => '3000',
-        'type' => 'leaf',
         'description' => 'Key auto repeat is only available if the picoLCD driver is built with
 libusb-1.0. Use KeyRepeatDelay and KeyRepeatInterval to configure key auto
 repeat.
 
 Key auto repeat delay (time in ms from first key report to first repeat). Use
-zero to disable auto repeat. '
+zero to disable auto repeat. ',
+        'max' => '3000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '300',
+        'value_type' => 'integer'
       },
       'KeyRepeatInterval',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '200',
-        'max' => '3000',
-        'type' => 'leaf',
         'description' => 'Key auto repeat interval (time in ms between repeat reports). Only used if
-KeyRepeatDelay is not zero. '
+KeyRepeatDelay is not zero. ',
+        'max' => '3000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '200',
+        'value_type' => 'integer'
       },
       'KeyTimeout',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '500',
-        'max' => '1000',
-        'type' => 'leaf',
         'description' => 'KeyTimeout is only used if the picoLCD driver is built with libusb-0.1. When
 built with libusb-1.0 key and IR data is input asynchronously so there is no
 need to wait for the USB data.
@@ -124,68 +120,76 @@ KeyTimeout is the time in ms that LCDd spends waiting for a key press before
 cycling through other duties.  Higher values make LCDd use less CPU time and
 make key presses more detectable.  Lower values make LCDd more responsive
 but a little prone to missing key presses.  500 (.5 second) is the default
-and a balanced value. '
+and a balanced value. ',
+        'max' => '1000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '500',
+        'value_type' => 'integer'
       },
       'Keylights',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'on',
-        'type' => 'leaf',
-        'description' => 'Light the keys? ',
         'choice' => [
           'on',
           'off'
-        ]
+        ],
+        'description' => 'Light the keys? ',
+        'type' => 'leaf',
+        'upstream_default' => 'on',
+        'value_type' => 'enum'
       },
       'LinkLights',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'on',
-        'type' => 'leaf',
-        'description' => 'Link the key lights to the backlight? ',
         'choice' => [
           'on',
           'off'
-        ]
+        ],
+        'description' => 'Link the key lights to the backlight? 
+[default: off]',
+        'type' => 'leaf',
+        'upstream_default' => 'on',
+        'value_type' => 'enum'
       },
       'LircFlushThreshold',
       {
-        'value_type' => 'integer',
-        'upstream_default' => '100',
-        'max' => '32767',
-        'type' => 'leaf',
         'description' => 'Threshold in jiffies of synthesized gap that triggers flushing the IR data
 to lirc 
-100 means 6.1ms. legal: 16 - 32767; Use 0 to disable.'
+100 means 6.1ms. legal: 16 - 32767; Use 0 to disable.',
+        'max' => '32767',
+        'type' => 'leaf',
+        'upstream_default' => '100',
+        'value_type' => 'integer'
       },
       'LircHost',
       {
-        'value_type' => 'uniline',
-        'default' => '127.0.0.1',
-        'type' => 'leaf',
         'description' => 'Host name or IP address of the LIRC instance that is to receive IR codes
-If not set, or set to an empty value, IR support is disabled.'
+If not set, or set to an empty value, IR support is disabled.',
+        'type' => 'leaf',
+        'upstream_default' => '127.0.0.1',
+        'value_type' => 'uniline'
       },
       'LircPort',
       {
-        'value_type' => 'integer',
-        'min' => '1',
-        'upstream_default' => '8765',
+        'description' => 'UDP port on which LIRC is listening ',
         'max' => '65535',
+        'min' => '1',
         'type' => 'leaf',
-        'description' => 'UDP port on which LIRC is listening '
+        'upstream_default' => '8765',
+        'value_type' => 'integer'
       },
       'OffBrightness',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '0',
-        'max' => '1000',
-        'type' => 'leaf',
         'description' => 'Set the brightness while the backlight is \'off\' .
-Works only with the 20x4 device.'
+Works only with the 20x4 device.
+[default: 0]',
+        'max' => '1000',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '0',
+        'value_type' => 'integer'
       }
-    ]
+    ],
+    'name' => 'LCDd::picolcd'
   }
 ]
 ;

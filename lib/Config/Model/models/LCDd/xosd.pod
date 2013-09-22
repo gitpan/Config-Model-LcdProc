@@ -4,7 +4,7 @@ Config::Model::models::LCDd::xosd - Configuration class LCDd::xosd
 
 =head1 VERSION
 
-version 2.039
+version 2.040
 
 =head1 DESCRIPTION
 
@@ -16,15 +16,15 @@ generated from LCDd.conf
 
 =head2 Font
 
-X font to use, in XLFD format, as given by "xfontsel"I<< Optional. Type uniline. default: '-*-terminus-*-r-*-*-*-320-*-*-*-*-*'.  >>
+X font to use, in XLFD format, as given by "xfontsel"I<< Optional. Type uniline. default: '-*-terminus-*-r-*-*-*-320-*-*-*-*-*'.  >> 
 
 =head2 Offset
 
-Offset in pixels from the top-left corner of the monitor I<< Optional. Type uniline. upstream_default: '0x0'.  >>
+Offset in pixels from the top-left corner of the monitor I<< Optional. Type uniline. upstream_default: '0x0'.  >> 
 
 =head2 Size
 
-set display size I<< Optional. Type uniline. upstream_default: '20x4'.  >>
+set display size I<< Optional. Type uniline. upstream_default: '20x4'.  >> 
 
 =head1 SEE ALSO
 

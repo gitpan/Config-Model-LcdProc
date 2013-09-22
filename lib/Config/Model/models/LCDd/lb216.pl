@@ -10,47 +10,47 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::lb216',
     'element' => [
       'Brightness',
       {
-        'value_type' => 'integer',
-        'min' => '0',
-        'upstream_default' => '255',
+        'description' => 'Set the initial brightness ',
         'max' => '255',
+        'min' => '0',
         'type' => 'leaf',
-        'description' => 'Set the initial brightness '
+        'upstream_default' => '255',
+        'value_type' => 'integer'
       },
       'Device',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '/dev/lcd',
+        'description' => 'Select the output device to use ',
         'type' => 'leaf',
-        'description' => 'Select the output device to use '
+        'upstream_default' => '/dev/lcd',
+        'value_type' => 'uniline'
       },
       'Reboot',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'no',
-        'type' => 'leaf',
         'description' => 'Reinitialize the LCD\'s BIOS ',
-        'choice' => [
-          'yes',
-          'no'
+        'type' => 'leaf',
+        'upstream_default' => 'no',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'Speed',
       {
-        'value_type' => 'enum',
-        'upstream_default' => '9600',
-        'type' => 'leaf',
-        'description' => 'Set the communication speed ',
         'choice' => [
           '2400',
           '9600'
-        ]
+        ],
+        'description' => 'Set the communication speed ',
+        'type' => 'leaf',
+        'upstream_default' => '9600',
+        'value_type' => 'enum'
       }
-    ]
+    ],
+    'name' => 'LCDd::lb216'
   }
 ]
 ;

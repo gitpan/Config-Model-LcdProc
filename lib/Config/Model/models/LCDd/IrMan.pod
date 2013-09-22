@@ -4,7 +4,7 @@ Config::Model::models::LCDd::IrMan - Configuration class LCDd::IrMan
 
 =head1 VERSION
 
-version 2.039
+version 2.040
 
 =head1 DESCRIPTION
 
@@ -16,12 +16,12 @@ generated from LCDd.conf
 
 =head2 Config
 
-Select the configuration file to use. I<< Optional. Type uniline. default: '/etc/irman.cfg'.  >>
+Select the configuration file to use. I<< Optional. Type uniline. upstream_default: '/etc/irman.cfg'.  >> 
 
 =head2 Device
 
 in case of trouble with IrMan, try the Lirc emulator for IrMan
-Select the input device to use. I<< Optional. Type uniline. default: '/dev/irman'.  >>
+Select the input device to use. I<< Optional. Type uniline. upstream_default: '/dev/irman'.  >> 
 
 =head1 SEE ALSO
 

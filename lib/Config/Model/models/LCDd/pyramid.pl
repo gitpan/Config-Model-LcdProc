@@ -10,16 +10,16 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::pyramid',
     'element' => [
       'Device',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '/dev/lcd',
+        'description' => 'device to connect to ',
         'type' => 'leaf',
-        'description' => 'device to connect to '
+        'upstream_default' => '/dev/lcd',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::pyramid'
   }
 ]
 ;

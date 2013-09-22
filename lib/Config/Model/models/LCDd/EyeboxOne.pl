@@ -10,92 +10,92 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::EyeboxOne',
     'element' => [
       'Backlight',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => 'yes',
+        'description' => 'Switch on the backlight? ',
         'type' => 'leaf',
-        'description' => 'Switch on the backlight? '
+        'upstream_default' => 'yes',
+        'value_type' => 'uniline'
       },
       'Cursor',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => 'no',
+        'description' => 'Switch on the cursor? ',
         'type' => 'leaf',
-        'description' => 'Switch on the cursor? '
+        'upstream_default' => 'no',
+        'value_type' => 'uniline'
       },
       'Device',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '/dev/ttyS1',
+        'description' => 'Select the output device to use ',
         'type' => 'leaf',
-        'description' => 'Select the output device to use '
+        'upstream_default' => '/dev/ttyS1',
+        'value_type' => 'uniline'
       },
       'DownKey',
       {
-        'value_type' => 'uniline',
         'default' => 'B',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'EscapeKey',
       {
-        'value_type' => 'uniline',
         'default' => 'P',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'LeftKey',
       {
-        'value_type' => 'uniline',
         'default' => 'D',
+        'description' => 'Enter Key is a \\r character, so it\'s hardcoded in the driver',
         'type' => 'leaf',
-        'description' => 'Enter Key is a \\r character, so it\'s hardcoded in the driver'
+        'value_type' => 'uniline'
       },
       'RightKey',
       {
-        'value_type' => 'uniline',
         'default' => 'C',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '20x4',
+        'description' => 'Set the display size ',
         'type' => 'leaf',
-        'description' => 'Set the display size '
+        'upstream_default' => '20x4',
+        'value_type' => 'uniline'
       },
       'Speed',
       {
-        'value_type' => 'enum',
-        'upstream_default' => '19200',
-        'type' => 'leaf',
-        'description' => 'Set the communication speed ',
         'choice' => [
           '1200',
           '2400',
           '9600',
           '19200'
-        ]
+        ],
+        'description' => 'Set the communication speed ',
+        'type' => 'leaf',
+        'upstream_default' => '19200',
+        'value_type' => 'enum'
       },
       'UpKey',
       {
-        'value_type' => 'uniline',
         'default' => 'A',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'keypad_test_mode',
       {
-        'value_type' => 'uniline',
         'default' => 'no',
-        'type' => 'leaf',
         'description' => 'You can find out which key of your display sends which
 character by setting keypad_test_mode to yes and running
 LCDd. LCDd will output all characters it receives.
 Afterwards you can modify the settings above and set
-keypad_set_mode to no again.'
+keypad_set_mode to no again.',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::EyeboxOne'
   }
 ]
 ;

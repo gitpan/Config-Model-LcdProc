@@ -10,16 +10,16 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::g15',
     'element' => [
       'size',
       {
-        'value_type' => 'uniline',
         'default' => '20x5',
+        'description' => 'Display size (currently unused)',
         'type' => 'leaf',
-        'description' => 'Display size (currently unused)'
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::g15'
   }
 ]
 ;

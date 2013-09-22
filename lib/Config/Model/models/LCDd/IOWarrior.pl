@@ -10,44 +10,45 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::IOWarrior',
     'element' => [
       'ExtendedMode',
       {
-        'value_type' => 'uniline',
-        'default' => 'yes',
-        'type' => 'leaf',
         'description' => 'If you have an HD66712, a KS0073 or another \'almost HD44780-compatible\',
-set this flag to get into extended mode (4-line linear).'
+set this flag to get into extended mode (4-line linear).',
+        'type' => 'leaf',
+        'upstream_default' => 'yes',
+        'value_type' => 'uniline'
       },
       'Lastline',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'yes',
-        'type' => 'leaf',
         'description' => 'Specifies if the last line is pixel addressable (yes) or it controls an
-underline effect (no). ',
-        'choice' => [
-          'yes',
-          'no'
+underline effect (no). 
+[default: yes]',
+        'type' => 'leaf',
+        'upstream_default' => 'yes',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'SerialNumber',
       {
-        'value_type' => 'uniline',
-        'default' => '00000674',
-        'type' => 'leaf',
         'description' => 'serial number. Must be exactly as listed by usbview
-(if not given, the 1st IOWarrior found gets used)'
+(if not given, the 1st IOWarrior found gets used)',
+        'type' => 'leaf',
+        'upstream_default' => '00000674',
+        'value_type' => 'uniline'
       },
       'Size',
       {
-        'value_type' => 'uniline',
         'default' => '20x4',
+        'description' => 'display dimensions',
         'type' => 'leaf',
-        'description' => 'display dimensions'
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::IOWarrior'
   }
 ]
 ;

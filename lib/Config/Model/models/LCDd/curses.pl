@@ -10,74 +10,74 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::curses',
     'element' => [
       'Background',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => 'cyan',
+        'description' => 'background color when "backlight" is off ',
         'type' => 'leaf',
-        'description' => 'background color when "backlight" is off '
+        'upstream_default' => 'cyan',
+        'value_type' => 'uniline'
       },
       'Backlight',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => 'red',
+        'description' => 'background color when "backlight" is on ',
         'type' => 'leaf',
-        'description' => 'background color when "backlight" is on '
+        'upstream_default' => 'red',
+        'value_type' => 'uniline'
       },
       'DrawBorder',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'yes',
-        'type' => 'leaf',
         'description' => 'draw Border ',
-        'choice' => [
-          'yes',
-          'no'
+        'type' => 'leaf',
+        'upstream_default' => 'yes',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'Foreground',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => 'blue',
-        'type' => 'leaf',
         'description' => 'color settings
-foreground color '
+foreground color ',
+        'type' => 'leaf',
+        'upstream_default' => 'blue',
+        'value_type' => 'uniline'
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '20x4',
+        'description' => 'display size ',
         'type' => 'leaf',
-        'description' => 'display size '
+        'upstream_default' => '20x4',
+        'value_type' => 'uniline'
       },
       'TopLeftX',
       {
-        'value_type' => 'uniline',
         'default' => '7',
-        'type' => 'leaf',
         'description' => 'What position (X,Y) to start the left top corner at...
-Default: (7,7)'
+Default: (7,7)',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'TopLeftY',
       {
-        'value_type' => 'uniline',
         'default' => '7',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'UseACS',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'no',
-        'type' => 'leaf',
         'description' => 'use ASC symbols for icons & bars ',
-        'choice' => [
-          'yes',
-          'no'
+        'type' => 'leaf',
+        'upstream_default' => 'no',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       }
-    ]
+    ],
+    'name' => 'LCDd::curses'
   }
 ]
 ;

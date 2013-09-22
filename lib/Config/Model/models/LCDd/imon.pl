@@ -10,17 +10,9 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::imon',
     'element' => [
       'CharMap',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'none',
-        'type' => 'leaf',
-        'description' => 'Character map to to map ISO-8859-1 to the displays character set.
- (upd16314, hd44780_koi8_r,
-hd44780_cp1251, hd44780_8859_5 are possible if compiled with additional
-charmaps)',
         'choice' => [
           'none',
           'hd44780_euro',
@@ -28,23 +20,31 @@ charmaps)',
           'hd44780_koi8_r',
           'hd44780_cp1251',
           'hd44780_8859_5'
-        ]
+        ],
+        'description' => 'Character map to to map ISO-8859-1 to the displays character set.
+ (upd16314, hd44780_koi8_r,
+hd44780_cp1251, hd44780_8859_5 are possible if compiled with additional
+charmaps)',
+        'type' => 'leaf',
+        'upstream_default' => 'none',
+        'value_type' => 'enum'
       },
       'Device',
       {
-        'value_type' => 'uniline',
         'default' => '/dev/lcd0',
+        'description' => 'select the device to use',
         'type' => 'leaf',
-        'description' => 'select the device to use'
+        'value_type' => 'uniline'
       },
       'Size',
       {
-        'value_type' => 'uniline',
         'default' => '16x2',
+        'description' => 'display dimensions',
         'type' => 'leaf',
-        'description' => 'display dimensions'
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::imon'
   }
 ]
 ;

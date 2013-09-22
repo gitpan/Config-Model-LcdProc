@@ -4,7 +4,7 @@ Config::Model::models::LCDd::sli - Configuration class LCDd::sli
 
 =head1 VERSION
 
-version 2.039
+version 2.040
 
 =head1 DESCRIPTION
 
@@ -16,11 +16,11 @@ generated from LCDd.conf
 
 =head2 Device
 
-Select the output device to use I<< Optional. Type uniline. upstream_default: '/dev/lcd'.  >>
+Select the output device to use I<< Optional. Type uniline. upstream_default: '/dev/lcd'.  >> 
 
 =head2 Speed
 
-Set the communication speed I<< Optional. Type enum. choice: '1200', '2400', '9600', '19200', '38400', '57600', '115200'. upstream_default: '19200'.  >>
+Set the communication speed I<< Optional. Type enum. choice: '1200', '2400', '9600', '19200', '38400', '57600', '115200'. upstream_default: '19200'.  >> 
 
 =head1 SEE ALSO
 

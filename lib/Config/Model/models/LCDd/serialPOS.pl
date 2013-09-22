@@ -10,41 +10,36 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::serialPOS',
     'element' => [
       'Device',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '/dev/lcd',
+        'description' => 'Device to use in serial mode ',
         'type' => 'leaf',
-        'description' => 'Device to use in serial mode '
+        'upstream_default' => '/dev/lcd',
+        'value_type' => 'uniline'
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '16x2',
+        'description' => 'Specifies the size of the display in characters. ',
         'type' => 'leaf',
-        'description' => 'Specifies the size of the display in characters. '
+        'upstream_default' => '16x2',
+        'value_type' => 'uniline'
       },
       'Speed',
       {
-        'value_type' => 'enum',
-        'upstream_default' => '9600',
-        'type' => 'leaf',
-        'description' => 'communication baud rate with the display ',
         'choice' => [
           '1200',
           '2400',
           '19200',
           '115200'
-        ]
+        ],
+        'description' => 'communication baud rate with the display ',
+        'type' => 'leaf',
+        'upstream_default' => '9600',
+        'value_type' => 'enum'
       },
       'Type',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'AEDEX',
-        'type' => 'leaf',
-        'description' => 'Set the communication protocol to use with the POS display.',
         'choice' => [
           'IEE',
           'Epson',
@@ -52,9 +47,14 @@
           'IBM',
           'LogicControls',
           'Ultimate'
-        ]
+        ],
+        'description' => 'Set the communication protocol to use with the POS display.',
+        'type' => 'leaf',
+        'upstream_default' => 'AEDEX',
+        'value_type' => 'enum'
       }
-    ]
+    ],
+    'name' => 'LCDd::serialPOS'
   }
 ]
 ;

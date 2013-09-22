@@ -10,128 +10,128 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::glcdlib',
     'element' => [
       'Backlight',
       {
-        'value_type' => 'uniline',
         'default' => 'no',
+        'description' => 'Backlight if applicable',
         'type' => 'leaf',
-        'description' => 'Backlight if applicable'
+        'value_type' => 'uniline'
       },
       'Brightness',
       {
-        'value_type' => 'uniline',
         'default' => '50',
+        'description' => 'Brightness (in %) if applicable',
         'type' => 'leaf',
-        'description' => 'Brightness (in %) if applicable'
+        'value_type' => 'uniline'
       },
       'CharEncoding',
       {
-        'value_type' => 'uniline',
         'default' => 'iso8859-2',
+        'description' => 'character encoding to use',
         'type' => 'leaf',
-        'description' => 'character encoding to use'
+        'value_type' => 'uniline'
       },
       'Contrast',
       {
-        'value_type' => 'uniline',
         'default' => '50',
+        'description' => 'Contrast (in %) if applicable',
         'type' => 'leaf',
-        'description' => 'Contrast (in %) if applicable'
+        'value_type' => 'uniline'
       },
       'Driver',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => 'image',
-        'type' => 'leaf',
         'description' => 'which graphical display supported by graphlcd-base to use 
-(see /etc/graphlcd.conf for possible drivers)'
+(see /etc/graphlcd.conf for possible drivers)',
+        'type' => 'leaf',
+        'upstream_default' => 'image',
+        'value_type' => 'uniline'
       },
       'FontFile',
       {
-        'value_type' => 'uniline',
         'default' => '/usr/share/fonts/corefonts/courbd.ttf',
+        'description' => 'path to font file to use',
         'type' => 'leaf',
-        'description' => 'path to font file to use'
+        'value_type' => 'uniline'
       },
       'Invert',
       {
-        'value_type' => 'uniline',
         'default' => 'no',
+        'description' => 'invert light/dark pixels',
         'type' => 'leaf',
-        'description' => 'invert light/dark pixels'
+        'value_type' => 'uniline'
       },
       'MinFontFaceSize',
       {
-        'value_type' => 'uniline',
         'default' => '7x12',
+        'description' => 'minimum size in pixels in which fonts should be rendered',
         'type' => 'leaf',
-        'description' => 'minimum size in pixels in which fonts should be rendered'
+        'value_type' => 'uniline'
       },
       'PixelShiftX',
       {
-        'value_type' => 'uniline',
         'default' => '0',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'PixelShiftY',
       {
-        'value_type' => 'uniline',
         'default' => '2',
-        'type' => 'leaf'
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'ShowBigBorder',
       {
-        'value_type' => 'uniline',
         'default' => 'no',
-        'type' => 'leaf',
         'description' => 'border within the usable text area,
 for setting up TextResolution and
 MinFontFaceSize (if using FT2);
-border around the unused area'
+border around the unused area',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       },
       'ShowDebugFrame',
       {
-        'value_type' => 'uniline',
         'default' => 'no',
+        'description' => 'turns on/off 1 pixel thick debugging',
         'type' => 'leaf',
-        'description' => 'turns on/off 1 pixel thick debugging'
+        'value_type' => 'uniline'
       },
       'ShowThinBorder',
       {
-        'value_type' => 'uniline',
         'default' => 'yes',
+        'description' => 'border around the unused area',
         'type' => 'leaf',
-        'description' => 'border around the unused area'
+        'value_type' => 'uniline'
       },
       'TextResolution',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '16x4',
-        'type' => 'leaf',
         'description' => 'text resolution in fixed width characters 
 (if it won\'t fit according to available physical pixel resolution
 and the minimum available font face size in pixels, then
-\'DebugBorder\' will automatically be turned on)'
+\'DebugBorder\' will automatically be turned on)',
+        'type' => 'leaf',
+        'upstream_default' => '16x4',
+        'value_type' => 'uniline'
       },
       'UpsideDown',
       {
-        'value_type' => 'uniline',
         'default' => 'no',
+        'description' => 'flip image upside down',
         'type' => 'leaf',
-        'description' => 'flip image upside down'
+        'value_type' => 'uniline'
       },
       'UseFT2',
       {
-        'value_type' => 'uniline',
         'default' => 'yes',
-        'type' => 'leaf',
         'description' => 'no=use graphlcd bitmap fonts (they have only one size / font file)
 yes=use fonts supported by FreeType2 (needs Freetype2 support in
-libglcdprocdriver and its dependants)'
+libglcdprocdriver and its dependants)',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::glcdlib'
   }
 ]
 ;

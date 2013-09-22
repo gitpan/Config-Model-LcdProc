@@ -10,34 +10,36 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::irtrans',
     'element' => [
       'Backlight',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'no',
+        'description' => 'Does the device have a backlight? 
+[default: no]',
         'type' => 'leaf',
-        'description' => 'Does the device have a backlight? ',
-        'choice' => [
-          'yes',
-          'no'
+        'upstream_default' => 'no',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'Hostname',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => 'localhost',
+        'description' => 'IRTrans device to connect to 
+[default: localhost]',
         'type' => 'leaf',
-        'description' => 'IRTrans device to connect to '
+        'upstream_default' => 'localhost',
+        'value_type' => 'uniline'
       },
       'Size',
       {
-        'value_type' => 'uniline',
         'default' => '16x2',
+        'description' => 'display dimensions',
         'type' => 'leaf',
-        'description' => 'display dimensions'
+        'value_type' => 'uniline'
       }
-    ]
+    ],
+    'name' => 'LCDd::irtrans'
   }
 ]
 ;

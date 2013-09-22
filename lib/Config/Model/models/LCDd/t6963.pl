@@ -10,57 +10,60 @@
 [
   {
     'class_description' => 'generated from LCDd.conf',
-    'name' => 'LCDd::t6963',
     'element' => [
       'ClearGraphic',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'no',
+        'description' => 'Clear graphic memory on start-up. 
+[default: no]',
         'type' => 'leaf',
-        'description' => 'Clear graphic memory on start-up. ',
-        'choice' => [
-          'yes',
-          'no'
+        'upstream_default' => 'no',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'Port',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '0x378',
+        'description' => 'port to use ',
         'type' => 'leaf',
-        'description' => 'port to use '
+        'upstream_default' => '0x378',
+        'value_type' => 'uniline'
       },
       'Size',
       {
-        'value_type' => 'uniline',
-        'upstream_default' => '128x64',
+        'description' => 'set display size in pixels ',
         'type' => 'leaf',
-        'description' => 'set display size in pixels '
+        'upstream_default' => '128x64',
+        'value_type' => 'uniline'
       },
       'bidirectional',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'yes',
-        'type' => 'leaf',
         'description' => 'Use LPT port in bi-directional mode. This should work on most LPT port and
-is required for proper timing! ',
-        'choice' => [
-          'yes',
-          'no'
+is required for proper timing! 
+[default: yes]',
+        'type' => 'leaf',
+        'upstream_default' => 'yes',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       },
       'delayBus',
       {
-        'value_type' => 'enum',
-        'upstream_default' => 'no',
+        'description' => 'Insert additional delays into reads / writes. 
+[default: no]',
         'type' => 'leaf',
-        'description' => 'Insert additional delays into reads / writes. ',
-        'choice' => [
-          'yes',
-          'no'
+        'upstream_default' => 'no',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
         ]
       }
-    ]
+    ],
+    'name' => 'LCDd::t6963'
   }
 ]
 ;
