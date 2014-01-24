@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::serialPOS
+# ABSTRACT:  Configuration class LCDd::serialPOS
 =head1 NAME
 
 Config::Model::models::LCDd::serialPOS - Configuration class LCDd::serialPOS
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 

@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::hd44780
+# ABSTRACT:  Configuration class LCDd::hd44780
 =head1 NAME
 
 Config::Model::models::LCDd::hd44780 - Configuration class LCDd::hd44780
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 
@@ -21,9 +23,7 @@ If you have a switchable backlight.I<< Optional. Type uniline. default: 'no'.  >
 =head2 Brightness
 
 Set brightness of the backlight (lcd2usb and usb4all):
-Brightness is the brightness while the backlight is set to 'on'.
-
-[default: 1000]I<< Optional. Type integer. upstream_default: '800'.  >> 
+Brightness is the brightness while the backlight is set to 'on'.I<< Optional. Type integer. upstream_default: '800'.  >> 
 
 =head2 CharMap
 
@@ -38,9 +38,7 @@ Select what type of connection. See documentation for types.I<< Optional. Type u
 
 =head2 Contrast
 
-Set the initial contrast (bwctusb, lcd2usb, and usb4all)
-
-[default: 0]I<< Optional. Type integer. upstream_default: '800'.  >> 
+Set the initial contrast (bwctusb, lcd2usb, and usb4all)I<< Optional. Type integer. upstream_default: '800'.  >> 
 
 =head2 DelayBus
 
@@ -98,20 +96,16 @@ You may also need to configure the keypad layout further on in this file.I<< Opt
 =head2 Lastline
 
 Specifies if the last line is pixel addressable (yes) or it controls an
-underline effect (no). 
-[default: yes]I<< Optional. Type boolean. upstream_default: 'yes'.  >> 
+underline effect (no). I<< Optional. Type boolean. upstream_default: 'yes'.  >> 
 
 =head2 LineAddress
 
 In extended mode, on some controllers like the ST7036 (in 3 line mode)
-the next line in DDRAM won't start 0x20 higher. 
-[default: 0x10]I<< Optional. Type uniline. upstream_default: '0x20'.  >> 
+the next line in DDRAM won't start 0x20 higher. I<< Optional. Type uniline. upstream_default: '0x20'.  >> 
 
 =head2 OffBrightness
 
-OffBrightness is the brightness while the backlight is set to 'off'.
-
-[default: 0]I<< Optional. Type integer. upstream_default: '300'.  >> 
+OffBrightness is the brightness while the backlight is set to 'off'.I<< Optional. Type integer. upstream_default: '300'.  >> 
 
 =head2 OutputPort
 

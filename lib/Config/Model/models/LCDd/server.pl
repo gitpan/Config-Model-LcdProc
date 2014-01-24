@@ -13,18 +13,17 @@
     'element' => [
       'AutoRotate',
       {
-        'choice' => [
-          'on',
-          'off'
-        ],
         'description' => 'If set to no, LCDd will start with screen rotation disabled. This has the
 same effect as if the ToggleRotateKey had been pressed. Rotation will start
 if the ToggleRotateKey is pressed. Note that this setting does not turn off
-priority sorting of screens. 
-[default: no]',
+priority sorting of screens. ',
         'type' => 'leaf',
         'upstream_default' => 'on',
-        'value_type' => 'enum'
+        'value_type' => 'boolean',
+        'write_as' => [
+          'off',
+          'on'
+        ]
       },
       'Backlight',
       {
@@ -34,8 +33,7 @@ priority sorting of screens.
           'on'
         ],
         'description' => 'Set master backlight setting. If set to \'open\' a client may control the
-backlight for its own screens (only). 
-[default: open]',
+backlight for its own screens (only). ',
         'type' => 'leaf',
         'upstream_default' => 'open',
         'value_type' => 'enum'
@@ -130,8 +128,7 @@ NOTE: Always place a slash as last character !',
       },
       'Foreground',
       {
-        'description' => 'The server will stay in the foreground if set to true .
-[default: no]',
+        'description' => 'The server will stay in the foreground if set to true .',
         'type' => 'leaf',
         'upstream_default' => 'no',
         'value_type' => 'boolean',
@@ -156,8 +153,7 @@ NOTE: Always place a slash as last character !',
           'on'
         ],
         'description' => 'Set master heartbeat setting. If set to \'open\' a client may control the
-heartbeat for its own screens (only). 
-[default: open]',
+heartbeat for its own screens (only). ',
         'type' => 'leaf',
         'upstream_default' => 'open',
         'value_type' => 'enum'
@@ -191,16 +187,14 @@ heartbeat for its own screens (only).
       },
       'ReportLevel',
       {
-        'description' => 'Sets the reporting level;  (warnings and errors only).
-[default: 3]',
+        'description' => 'Sets the reporting level;  (warnings and errors only).',
         'type' => 'leaf',
         'upstream_default' => '2',
         'value_type' => 'integer'
       },
       'ReportToSyslog',
       {
-        'description' => 'Should we report to syslog instead of stderr ? 
-[default: yes]',
+        'description' => 'Should we report to syslog instead of stderr ? ',
         'type' => 'leaf',
         'upstream_default' => 'no',
         'value_type' => 'boolean',
@@ -231,16 +225,14 @@ heartbeat for its own screens (only).
         'description' => 'If yes, the the serverscreen will be rotated as a usual info screen. If no,
 it will be a background screen, only visible when no other screens are
 active. The special value \'blank\' is similar to no, but only a blank screen
-is displayed. 
-[default: no]',
+is displayed. ',
         'type' => 'leaf',
         'upstream_default' => 'on',
         'value_type' => 'enum'
       },
       'TitleSpeed',
       {
-        'description' => 'set title scrolling speed 
-[default: 10]',
+        'description' => 'set title scrolling speed ',
         'max' => '10',
         'min' => '0',
         'type' => 'leaf',

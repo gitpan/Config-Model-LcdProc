@@ -13,15 +13,14 @@
     'element' => [
       'Backlight',
       {
-        'choice' => [
-          'on',
-          'off'
-        ],
-        'description' => 'Set the backlight state 
-[default: on]',
+        'description' => 'Set the backlight state ',
         'type' => 'leaf',
         'upstream_default' => 'on',
-        'value_type' => 'enum'
+        'value_type' => 'boolean',
+        'write_as' => [
+          'off',
+          'on'
+        ]
       },
       'Contrast',
       {
@@ -47,8 +46,7 @@
         ],
         'description' => 'Set the disc mode 
 0 => spin the "slim" disc - two disc segments,
-1 => their complement spinning;
-[default: 0]',
+1 => their complement spinning;',
         'type' => 'leaf',
         'upstream_default' => '0',
         'value_type' => 'enum'
@@ -58,8 +56,7 @@
         'description' => 'Set the exit behavior 
 0 means leave shutdown message,
 1 means show the big clock,
-2 means blank device
-[default: 2]',
+2 means blank device',
         'max' => '2',
         'min' => '0',
         'type' => 'leaf',
@@ -82,8 +79,7 @@ Choose 1 for 15c2:0038 device',
       },
       'Size',
       {
-        'description' => 'Specify the size of the display in pixels 
-[default: 96x16]',
+        'description' => 'Specify the size of the display in pixels ',
         'type' => 'leaf',
         'upstream_default' => '96x16',
         'value_type' => 'uniline'

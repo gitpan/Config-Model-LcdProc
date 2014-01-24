@@ -22,8 +22,7 @@
       },
       'Device',
       {
-        'description' => 'device to use 
-[default: /dev/ttyS1]',
+        'description' => 'device to use ',
         'type' => 'leaf',
         'upstream_default' => '/dev/ttyS1',
         'value_type' => 'uniline'
@@ -41,8 +40,7 @@ switched off in case LCDd is inactive',
       },
       'Size',
       {
-        'description' => 'display size 
-[default: 16x2]',
+        'description' => 'display size ',
         'type' => 'leaf',
         'upstream_default' => '16x2',
         'value_type' => 'uniline'

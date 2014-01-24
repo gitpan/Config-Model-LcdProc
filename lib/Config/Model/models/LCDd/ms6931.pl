@@ -20,8 +20,7 @@
       },
       'Size',
       {
-        'description' => 'display size 
-[default: 16x2]',
+        'description' => 'display size ',
         'type' => 'leaf',
         'upstream_default' => '16x2',
         'value_type' => 'uniline'

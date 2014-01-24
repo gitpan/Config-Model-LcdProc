@@ -13,8 +13,7 @@
     'element' => [
       'Brightness',
       {
-        'description' => 'Set the initial brightness 
-[default: 480]',
+        'description' => 'Set the initial brightness ',
         'max' => '1000',
         'min' => '1',
         'type' => 'leaf',
@@ -23,8 +22,7 @@
       },
       'Contrast',
       {
-        'description' => 'Set the initial contrast 
-[default: 200]',
+        'description' => 'Set the initial contrast ',
         'max' => '1000',
         'min' => '0',
         'type' => 'leaf',
@@ -40,8 +38,7 @@
       },
       'Edition',
       {
-        'description' => 'Edition level of the device (can be 1, 2 or 3) 
-[default: 1]',
+        'description' => 'Edition level of the device (can be 1, 2 or 3) ',
         'type' => 'leaf',
         'upstream_default' => '2',
         'value_type' => 'uniline'
@@ -50,8 +47,7 @@
       {
         'description' => 'Set the initial off-brightness 
 This value is used when the display is normally
-switched off in case LCDd is inactive
-[default: 100]',
+switched off in case LCDd is inactive',
         'max' => '1000',
         'min' => '1',
         'type' => 'leaf',

@@ -33,8 +33,7 @@ Can be set but does not change anything internally',
       'Mode',
       {
         'description' => 'svgalib mode to use 
-legal values are supported svgalib modes
-[default: G640x480x256]',
+legal values are supported svgalib modes',
         'type' => 'leaf',
         'upstream_default' => 'G320x240x256',
         'value_type' => 'uniline'

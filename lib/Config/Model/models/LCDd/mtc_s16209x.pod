@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::mtc_s16209x
+# ABSTRACT:  Configuration class LCDd::mtc_s16209x
 =head1 NAME
 
 Config::Model::models::LCDd::mtc_s16209x - Configuration class LCDd::mtc_s16209x
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 

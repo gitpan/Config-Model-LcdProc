@@ -14,8 +14,7 @@
       'Brightness',
       {
         'description' => 'Set the initial brightness 
-0-250 = 25%, 251-500 = 50%, 501-750 = 75%, 751-1000 = 100%
-[default: 1000]',
+0-250 = 25%, 251-500 = 50%, 501-750 = 75%, 751-1000 = 100%',
         'max' => '1000',
         'min' => '0',
         'type' => 'leaf',
@@ -25,8 +24,7 @@
       'Lastline',
       {
         'description' => 'Specifies if the last line is pixel addressable (yes) or it only controls an
-underline effect (no). 
-[default: yes]',
+underline effect (no). ',
         'type' => 'leaf',
         'upstream_default' => 'yes',
         'value_type' => 'boolean',
@@ -38,16 +36,14 @@ underline effect (no).
       'ProductID',
       {
         'description' => 'USB Product ID 
-Change only if testing a compatible device.
-[default: 0x6001]',
+Change only if testing a compatible device.',
         'type' => 'leaf',
         'upstream_default' => '0x6001',
         'value_type' => 'uniline'
       },
       'Size',
       {
-        'description' => 'Columns by lines 
-[default: 20x2]',
+        'description' => 'Columns by lines ',
         'type' => 'leaf',
         'upstream_default' => '20x2',
         'value_type' => 'uniline'
@@ -55,8 +51,7 @@ Change only if testing a compatible device.
       'VendorID',
       {
         'description' => 'USB Vendor ID 
-Change only if testing a compatible device.
-[default: 0x0403]',
+Change only if testing a compatible device.',
         'type' => 'leaf',
         'upstream_default' => '0x0403',
         'value_type' => 'uniline'

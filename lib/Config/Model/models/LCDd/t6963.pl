@@ -13,8 +13,7 @@
     'element' => [
       'ClearGraphic',
       {
-        'description' => 'Clear graphic memory on start-up. 
-[default: no]',
+        'description' => 'Clear graphic memory on start-up. ',
         'type' => 'leaf',
         'upstream_default' => 'no',
         'value_type' => 'boolean',
@@ -40,8 +39,7 @@
       'bidirectional',
       {
         'description' => 'Use LPT port in bi-directional mode. This should work on most LPT port and
-is required for proper timing! 
-[default: yes]',
+is required for proper timing! ',
         'type' => 'leaf',
         'upstream_default' => 'yes',
         'value_type' => 'boolean',
@@ -52,8 +50,7 @@ is required for proper timing!
       },
       'delayBus',
       {
-        'description' => 'Insert additional delays into reads / writes. 
-[default: no]',
+        'description' => 'Insert additional delays into reads / writes. ',
         'type' => 'leaf',
         'upstream_default' => 'no',
         'value_type' => 'boolean',

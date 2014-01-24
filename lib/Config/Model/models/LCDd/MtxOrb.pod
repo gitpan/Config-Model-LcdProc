@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::MtxOrb
+# ABSTRACT:  Configuration class LCDd::MtxOrb
 =head1 NAME
 
 Config::Model::models::LCDd::MtxOrb - Configuration class LCDd::MtxOrb
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 

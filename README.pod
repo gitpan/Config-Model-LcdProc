@@ -27,4 +27,4 @@ C<-force> option.
 
 =head2 Installation from git
 
-See README.install_from_git file
+See L<README.build-from-git|https://github.com/dod38fr/config-model-lcdproc/blob/master/README.build-from-git> file

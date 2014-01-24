@@ -13,16 +13,14 @@
     'element' => [
       'Backlight',
       {
-        'choice' => [
-          'on',
-          'off'
-        ],
-        'description' => 'Sets the initial state of the backlight upon start-up.
-
-[default: on]',
+        'description' => 'Sets the initial state of the backlight upon start-up.',
         'type' => 'leaf',
         'upstream_default' => 'on',
-        'value_type' => 'enum'
+        'value_type' => 'boolean',
+        'write_as' => [
+          'off',
+          'on'
+        ]
       },
       'Brightness',
       {
@@ -45,17 +43,17 @@ with the 20x4 device',
       },
       'Key0Light',
       {
-        'choice' => [
-          'on',
-          'off'
-        ],
         'description' => 'If Keylights is on, the you can unlight specific keys below:
 Key0 is the directional pad.  Key1 - Key5 correspond to the F1 - F5 keys.
 There is no LED for the +/- keys.  This is a handy way to indicate to users
 which keys are disabled.  ',
         'type' => 'leaf',
         'upstream_default' => 'on',
-        'value_type' => 'enum'
+        'value_type' => 'boolean',
+        'write_as' => [
+          'off',
+          'on'
+        ]
       },
       'Key1Light',
       {
@@ -129,26 +127,25 @@ and a balanced value. ',
       },
       'Keylights',
       {
-        'choice' => [
-          'on',
-          'off'
-        ],
         'description' => 'Light the keys? ',
         'type' => 'leaf',
         'upstream_default' => 'on',
-        'value_type' => 'enum'
+        'value_type' => 'boolean',
+        'write_as' => [
+          'off',
+          'on'
+        ]
       },
       'LinkLights',
       {
-        'choice' => [
-          'on',
-          'off'
-        ],
-        'description' => 'Link the key lights to the backlight? 
-[default: off]',
+        'description' => 'Link the key lights to the backlight? ',
         'type' => 'leaf',
         'upstream_default' => 'on',
-        'value_type' => 'enum'
+        'value_type' => 'boolean',
+        'write_as' => [
+          'off',
+          'on'
+        ]
       },
       'LircFlushThreshold',
       {
@@ -180,8 +177,7 @@ If not set, or set to an empty value, IR support is disabled.',
       'OffBrightness',
       {
         'description' => 'Set the brightness while the backlight is \'off\' .
-Works only with the 20x4 device.
-[default: 0]',
+Works only with the 20x4 device.',
         'max' => '1000',
         'min' => '0',
         'type' => 'leaf',

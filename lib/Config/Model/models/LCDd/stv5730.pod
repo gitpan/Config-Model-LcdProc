@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::stv5730
+# ABSTRACT:  Configuration class LCDd::stv5730
 =head1 NAME
 
 Config::Model::models::LCDd::stv5730 - Configuration class LCDd::stv5730
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 

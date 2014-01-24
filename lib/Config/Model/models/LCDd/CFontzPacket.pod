@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::CFontzPacket
+# ABSTRACT:  Configuration class LCDd::CFontzPacket
 =head1 NAME
 
 Config::Model::models::LCDd::CFontzPacket - Configuration class LCDd::CFontzPacket
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 
@@ -40,8 +42,7 @@ switched off in case LCDd is inactive. I<< Optional. Type integer. upstream_defa
 
 Very old 633 firmware versions do not support partial screen updates using
 'Send Data to LCD' command (31). For those devices it may be necessary to
-enable this flag. 
-[default: yes]I<< Optional. Type boolean. upstream_default: 'no'.  >> 
+enable this flag. I<< Optional. Type boolean. upstream_default: 'no'.  >> 
 
 =head2 Reboot
 
@@ -55,14 +56,12 @@ value should not be necessary.I<< Optional. Type uniline. upstream_default: '20x
 =head2 Speed
 
 Override the default communication speed known for the selected model.
-Default value depends on model 
-[default: 115200]I<< Optional. Type enum. choice: '19200', '115200'.  >> 
+Default value depends on model I<< Optional. Type enum. choice: '19200', '115200'.  >> 
 
 =head2 USB
 
 Enable the USB flag if the device is connected to an USB port. For
-serial ports leave it disabled. 
-[default: yes]I<< Optional. Type boolean. upstream_default: 'no'.  >> 
+serial ports leave it disabled. I<< Optional. Type boolean. upstream_default: 'no'.  >> 
 
 =head1 SEE ALSO
 

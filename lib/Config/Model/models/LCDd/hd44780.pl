@@ -21,9 +21,7 @@
       'Brightness',
       {
         'description' => 'Set brightness of the backlight (lcd2usb and usb4all):
-Brightness is the brightness while the backlight is set to \'on\'.
-
-[default: 1000]',
+Brightness is the brightness while the backlight is set to \'on\'.',
         'max' => '1000',
         'min' => '0',
         'type' => 'leaf',
@@ -59,9 +57,7 @@ compiled with additional charmaps)',
       },
       'Contrast',
       {
-        'description' => 'Set the initial contrast (bwctusb, lcd2usb, and usb4all)
-
-[default: 0]',
+        'description' => 'Set the initial contrast (bwctusb, lcd2usb, and usb4all)',
         'max' => '1000',
         'min' => '0',
         'type' => 'leaf',
@@ -151,8 +147,7 @@ You may also need to configure the keypad layout further on in this file.',
       'Lastline',
       {
         'description' => 'Specifies if the last line is pixel addressable (yes) or it controls an
-underline effect (no). 
-[default: yes]',
+underline effect (no). ',
         'type' => 'leaf',
         'upstream_default' => 'yes',
         'value_type' => 'boolean',
@@ -164,17 +159,14 @@ underline effect (no).
       'LineAddress',
       {
         'description' => 'In extended mode, on some controllers like the ST7036 (in 3 line mode)
-the next line in DDRAM won\'t start 0x20 higher. 
-[default: 0x10]',
+the next line in DDRAM won\'t start 0x20 higher. ',
         'type' => 'leaf',
         'upstream_default' => '0x20',
         'value_type' => 'uniline'
       },
       'OffBrightness',
       {
-        'description' => 'OffBrightness is the brightness while the backlight is set to \'off\'.
-
-[default: 0]',
+        'description' => 'OffBrightness is the brightness while the backlight is set to \'off\'.',
         'max' => '1000',
         'min' => '0',
         'type' => 'leaf',

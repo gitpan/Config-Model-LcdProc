@@ -13,8 +13,7 @@
     'element' => [
       'lircrc',
       {
-        'description' => 'Specify an alternative location of the lircrc file 
-[default: /etc/lircrc.lcdproc]',
+        'description' => 'Specify an alternative location of the lircrc file ',
         'type' => 'leaf',
         'upstream_default' => '~/.lircrc',
         'value_type' => 'uniline'

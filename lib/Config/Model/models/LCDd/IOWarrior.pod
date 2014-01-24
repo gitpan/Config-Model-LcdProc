@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::IOWarrior
+# ABSTRACT:  Configuration class LCDd::IOWarrior
 =head1 NAME
 
 Config::Model::models::LCDd::IOWarrior - Configuration class LCDd::IOWarrior
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 
@@ -22,8 +24,7 @@ set this flag to get into extended mode (4-line linear).I<< Optional. Type unili
 =head2 Lastline
 
 Specifies if the last line is pixel addressable (yes) or it controls an
-underline effect (no). 
-[default: yes]I<< Optional. Type boolean. upstream_default: 'yes'.  >> 
+underline effect (no). I<< Optional. Type boolean. upstream_default: 'yes'.  >> 
 
 =head2 SerialNumber
 

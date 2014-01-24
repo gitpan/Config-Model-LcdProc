@@ -13,8 +13,7 @@
     'element' => [
       'Backlight',
       {
-        'description' => 'Does the device have a backlight? 
-[default: no]',
+        'description' => 'Does the device have a backlight? ',
         'type' => 'leaf',
         'upstream_default' => 'no',
         'value_type' => 'boolean',
@@ -25,8 +24,7 @@
       },
       'Hostname',
       {
-        'description' => 'IRTrans device to connect to 
-[default: localhost]',
+        'description' => 'IRTrans device to connect to ',
         'type' => 'leaf',
         'upstream_default' => 'localhost',
         'value_type' => 'uniline'

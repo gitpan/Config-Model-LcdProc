@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::joy
+# ABSTRACT:  Configuration class LCDd::joy
 =head1 NAME
 
 Config::Model::models::LCDd::joy - Configuration class LCDd::joy
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 

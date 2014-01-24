@@ -22,8 +22,7 @@ set this flag to get into extended mode (4-line linear).',
       'Lastline',
       {
         'description' => 'Specifies if the last line is pixel addressable (yes) or it controls an
-underline effect (no). 
-[default: yes]',
+underline effect (no). ',
         'type' => 'leaf',
         'upstream_default' => 'yes',
         'value_type' => 'boolean',

@@ -30,8 +30,7 @@
       },
       'ISO_8859_1',
       {
-        'description' => 'enable ISO 8859 1 compatibility 
-[default: yes]',
+        'description' => 'enable ISO 8859 1 compatibility ',
         'type' => 'leaf',
         'upstream_default' => 'yes',
         'value_type' => 'boolean',
@@ -64,9 +63,7 @@ Portaddress where the LPT is. Used in parallel mode only. Usual values are
       },
       'PortWait',
       {
-        'description' => 'Set parallel port timing delay (us). Used in parallel mode only.
-
-[default: 2]',
+        'description' => 'Set parallel port timing delay (us). Used in parallel mode only.',
         'max' => '255',
         'min' => '0',
         'type' => 'leaf',

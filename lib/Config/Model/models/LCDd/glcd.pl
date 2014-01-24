@@ -13,9 +13,7 @@
     'element' => [
       'Brightness',
       {
-        'description' => 'Set brightness of the backlight if the backlight is switched \'on\'.
-
-[default: 1000]',
+        'description' => 'Set brightness of the backlight if the backlight is switched \'on\'.',
         'max' => '1000',
         'min' => '0',
         'type' => 'leaf',
@@ -40,9 +38,7 @@ default 6x8 cell is used.',
       },
       'Contrast',
       {
-        'description' => 'Set the initial contrast if supported by connection type.
-
-[default: 600]',
+        'description' => 'Set the initial contrast if supported by connection type.',
         'max' => '1000',
         'min' => '0',
         'type' => 'leaf',
@@ -78,8 +74,7 @@ By default keys \'A\' to \'F\' are assigned Up, Down, Left, Right, Enter, Escape
       'KeyRepeatDelay',
       {
         'description' => 'Time (ms) from first key report to first repeat. Set to 0 to disable repeated
-key reports. 
-[default: 500]',
+key reports. ',
         'max' => '3000',
         'min' => '0',
         'type' => 'leaf',
@@ -89,8 +84,7 @@ key reports.
       'KeyRepeatInterval',
       {
         'description' => 'Time (ms) between repeated key reports. Ignored if KeyRepeatDelay is disabled
-(set to zero). 
-[default: 300]',
+(set to zero). ',
         'max' => '3000',
         'min' => '0',
         'type' => 'leaf',
@@ -100,8 +94,7 @@ key reports.
       'OffBrightness',
       {
         'description' => 'Set brightness of the backlight if the backlight is switched \'off\'. Set this
-to zero to completely turn off the backlight. 
-[default: 0]',
+to zero to completely turn off the backlight. ',
         'max' => '1000',
         'min' => '0',
         'type' => 'leaf',
@@ -110,8 +103,7 @@ to zero to completely turn off the backlight.
       },
       'Port',
       {
-        'description' => 't6963: Parallel port to use 
-[default: 0x378]',
+        'description' => 't6963: Parallel port to use ',
         'type' => 'leaf',
         'upstream_default' => '0x378',
         'value_type' => 'uniline'
@@ -119,8 +111,7 @@ to zero to completely turn off the backlight.
       'Size',
       {
         'description' => 'Width and height of the display in pixel. The supported sizes may depend on
-the ConnectionType. 
-[default: 128x64]',
+the ConnectionType. ',
         'type' => 'leaf',
         'upstream_default' => '128x64',
         'value_type' => 'uniline'
@@ -128,8 +119,7 @@ the ConnectionType.
       'bidirectional',
       {
         'description' => 't6963: Use LPT port in bi-directional mode. This should work on most LPT port
-and is required for proper timing! 
-[default: yes]',
+and is required for proper timing! ',
         'type' => 'leaf',
         'upstream_default' => 'yes',
         'value_type' => 'boolean',
@@ -140,8 +130,7 @@ and is required for proper timing!
       },
       'delayBus',
       {
-        'description' => 't6963: Insert additional delays into reads / writes. 
-[default: no]',
+        'description' => 't6963: Insert additional delays into reads / writes. ',
         'type' => 'leaf',
         'upstream_default' => 'no',
         'value_type' => 'boolean',
@@ -153,8 +142,7 @@ and is required for proper timing!
       'fontHasIcons',
       {
         'description' => 'Some fonts miss the Unicode characters used to represent icons. In this case
-the built-in 5x8 font can used if this option is turned off. 
-[default: no]',
+the built-in 5x8 font can used if this option is turned off. ',
         'type' => 'leaf',
         'upstream_default' => 'yes',
         'value_type' => 'boolean',
@@ -202,8 +190,7 @@ Important: The value must be quoted as it contains equal signs!',
       'useFT2',
       {
         'description' => 'If LCDproc has been compiled with FreeType 2 support this option can be used
-to turn if off intentionally. 
-[default: no]',
+to turn if off intentionally. ',
         'type' => 'leaf',
         'upstream_default' => 'yes',
         'value_type' => 'boolean',

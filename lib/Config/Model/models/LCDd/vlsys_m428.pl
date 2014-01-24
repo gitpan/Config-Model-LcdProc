@@ -13,8 +13,7 @@
     'element' => [
       'Device',
       {
-        'description' => 'Select the output device to use 
-[default: /dev/ttyUSB0]',
+        'description' => 'Select the output device to use ',
         'type' => 'leaf',
         'upstream_default' => '/dev/ttyUSB0',
         'value_type' => 'uniline'

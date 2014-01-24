@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::svga
+# ABSTRACT:  Configuration class LCDd::svga
 =head1 NAME
 
 Config::Model::models::LCDd::svga - Configuration class LCDd::svga
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 
@@ -26,8 +28,7 @@ Can be set but does not change anything internally. I<< Optional. Type integer. 
 =head2 Mode
 
 svgalib mode to use 
-legal values are supported svgalib modes
-[default: G640x480x256]I<< Optional. Type uniline. upstream_default: 'G320x240x256'.  >> 
+legal values are supported svgalib modes. I<< Optional. Type uniline. upstream_default: 'G320x240x256'.  >> 
 
 =head2 OffBrightness
 

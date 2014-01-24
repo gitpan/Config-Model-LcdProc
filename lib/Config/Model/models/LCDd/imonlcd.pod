@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::imonlcd
+# ABSTRACT:  Configuration class LCDd::imonlcd
 =head1 NAME
 
 Config::Model::models::LCDd::imonlcd - Configuration class LCDd::imonlcd
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 
@@ -16,8 +18,7 @@ generated from LCDd.conf
 
 =head2 Backlight
 
-Set the backlight state 
-[default: on]I<< Optional. Type enum. choice: 'on', 'off'. upstream_default: 'on'.  >> 
+Set the backlight state I<< Optional. Type boolean. upstream_default: 'on'.  >> 
 
 =head2 Contrast
 
@@ -31,16 +32,14 @@ Select the output device to use I<< Optional. Type uniline. upstream_default: '/
 
 Set the disc mode 
 0 => spin the "slim" disc - two disc segments,
-1 => their complement spinning;
-[default: 0]I<< Optional. Type enum. choice: '0', '1'. upstream_default: '0'.  >> 
+1 => their complement spinning;I<< Optional. Type enum. choice: '0', '1'. upstream_default: '0'.  >> 
 
 =head2 OnExit
 
 Set the exit behavior 
 0 means leave shutdown message,
 1 means show the big clock,
-2 means blank device
-[default: 2]I<< Optional. Type integer. upstream_default: '1'.  >> 
+2 means blank device. I<< Optional. Type integer. upstream_default: '1'.  >> 
 
 =head2 Protocol
 
@@ -51,8 +50,7 @@ Choose 1 for 15c2:0038 device. I<< Optional. Type enum. choice: '0', '1'. upstre
 
 =head2 Size
 
-Specify the size of the display in pixels 
-[default: 96x16]I<< Optional. Type uniline. upstream_default: '96x16'.  >> 
+Specify the size of the display in pixels I<< Optional. Type uniline. upstream_default: '96x16'.  >> 
 
 =head1 SEE ALSO
 

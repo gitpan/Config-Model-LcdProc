@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::serialVFD
+# ABSTRACT:  Configuration class LCDd::serialVFD
 =head1 NAME
 
 Config::Model::models::LCDd::serialVFD - Configuration class LCDd::serialVFD
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 
@@ -25,8 +27,7 @@ Device to use in serial mode. Usual values are /dev/ttyS0 and /dev/ttyS1. I<< Op
 
 =head2 ISO_8859_1
 
-enable ISO 8859 1 compatibility 
-[default: yes]I<< Optional. Type boolean. upstream_default: 'yes'.  >> 
+enable ISO 8859 1 compatibility I<< Optional. Type boolean. upstream_default: 'yes'.  >> 
 
 =head2 OffBrightness
 
@@ -44,9 +45,7 @@ Portaddress where the LPT is. Used in parallel mode only. Usual values are
 
 =head2 PortWait
 
-Set parallel port timing delay (us). Used in parallel mode only.
-
-[default: 2]I<< Optional. Type integer. upstream_default: '2'.  >> 
+Set parallel port timing delay (us). Used in parallel mode only.I<< Optional. Type integer. upstream_default: '2'.  >> 
 
 =head2 Size
 

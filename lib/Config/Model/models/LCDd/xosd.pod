@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::xosd
+# ABSTRACT:  Configuration class LCDd::xosd
 =head1 NAME
 
 Config::Model::models::LCDd::xosd - Configuration class LCDd::xosd
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 

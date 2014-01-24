@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::lirc
+# ABSTRACT:  Configuration class LCDd::lirc
 =head1 NAME
 
 Config::Model::models::LCDd::lirc - Configuration class LCDd::lirc
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 
@@ -16,8 +18,7 @@ generated from LCDd.conf
 
 =head2 lircrc
 
-Specify an alternative location of the lircrc file 
-[default: /etc/lircrc.lcdproc]I<< Optional. Type uniline. upstream_default: '~/.lircrc'.  >> 
+Specify an alternative location of the lircrc file I<< Optional. Type uniline. upstream_default: '~/.lircrc'.  >> 
 
 =head2 prog
 

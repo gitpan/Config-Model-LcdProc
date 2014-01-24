@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::picolcd
+# ABSTRACT:  Configuration class LCDd::picolcd
 =head1 NAME
 
 Config::Model::models::LCDd::picolcd - Configuration class LCDd::picolcd
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 
@@ -16,9 +18,7 @@ generated from LCDd.conf
 
 =head2 Backlight
 
-Sets the initial state of the backlight upon start-up.
-
-[default: on]I<< Optional. Type enum. choice: 'on', 'off'. upstream_default: 'on'.  >> 
+Sets the initial state of the backlight upon start-up.I<< Optional. Type boolean. upstream_default: 'on'.  >> 
 
 =head2 Brightness
 
@@ -34,7 +34,7 @@ Set the initial contrast I<< Optional. Type integer. upstream_default: '1000'.  
 If Keylights is on, the you can unlight specific keys below:
 Key0 is the directional pad.  Key1 - Key5 correspond to the F1 - F5 keys.
 There is no LED for the +/- keys.  This is a handy way to indicate to users
-which keys are disabled.  I<< Optional. Type enum. choice: 'on', 'off'. upstream_default: 'on'.  >> 
+which keys are disabled.  I<< Optional. Type boolean. upstream_default: 'on'.  >> 
 
 =head2 Key1Light
 
@@ -83,12 +83,11 @@ and a balanced value. I<< Optional. Type integer. upstream_default: '500'.  >>
 
 =head2 Keylights
 
-Light the keys? I<< Optional. Type enum. choice: 'on', 'off'. upstream_default: 'on'.  >> 
+Light the keys? I<< Optional. Type boolean. upstream_default: 'on'.  >> 
 
 =head2 LinkLights
 
-Link the key lights to the backlight? 
-[default: off]I<< Optional. Type enum. choice: 'on', 'off'. upstream_default: 'on'.  >> 
+Link the key lights to the backlight? I<< Optional. Type boolean. upstream_default: 'on'.  >> 
 
 =head2 LircFlushThreshold
 
@@ -108,8 +107,7 @@ UDP port on which LIRC is listening I<< Optional. Type integer. upstream_default
 =head2 OffBrightness
 
 Set the brightness while the backlight is 'off' .
-Works only with the 20x4 device.
-[default: 0]I<< Optional. Type integer. upstream_default: '0'.  >> 
+Works only with the 20x4 device.I<< Optional. Type integer. upstream_default: '0'.  >> 
 
 =head1 SEE ALSO
 

@@ -9,7 +9,7 @@
 #
 package Config::Model::LcdProc;
 {
-  $Config::Model::LcdProc::VERSION = '2.040';
+  $Config::Model::LcdProc::VERSION = '2.041';
 }
 
 1;
@@ -22,7 +22,7 @@ Config::Model::LcdProc - Edit and validate LcdProc configuration file
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 SYNOPSIS
 

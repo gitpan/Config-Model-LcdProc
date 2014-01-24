@@ -64,8 +64,7 @@ switched off in case LCDd is inactive',
       {
         'description' => 'Very old 633 firmware versions do not support partial screen updates using
 \'Send Data to LCD\' command (31). For those devices it may be necessary to
-enable this flag. 
-[default: yes]',
+enable this flag. ',
         'type' => 'leaf',
         'upstream_default' => 'no',
         'value_type' => 'boolean',
@@ -100,16 +99,14 @@ value should not be necessary.',
           '115200'
         ],
         'description' => 'Override the default communication speed known for the selected model.
-Default value depends on model 
-[default: 115200]',
+Default value depends on model ',
         'type' => 'leaf',
         'value_type' => 'enum'
       },
       'USB',
       {
         'description' => 'Enable the USB flag if the device is connected to an USB port. For
-serial ports leave it disabled. 
-[default: yes]',
+serial ports leave it disabled. ',
         'type' => 'leaf',
         'upstream_default' => 'no',
         'value_type' => 'boolean',

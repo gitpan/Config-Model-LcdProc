@@ -1,10 +1,12 @@
+# PODNAME: Config::Model::models::LCDd::pyramid
+# ABSTRACT:  Configuration class LCDd::pyramid
 =head1 NAME
 
 Config::Model::models::LCDd::pyramid - Configuration class LCDd::pyramid
 
 =head1 VERSION
 
-version 2.040
+version 2.041
 
 =head1 DESCRIPTION
 
