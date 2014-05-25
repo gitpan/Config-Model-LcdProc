@@ -1,7 +1,7 @@
 #
 # This file is part of Config-Model-LcdProc
 #
-# This software is Copyright (c) 2013 by Dominique Dumont.
+# This software is Copyright (c) 2014 by Dominique Dumont.
 #
 # This is free software, licensed under:
 #
@@ -27,7 +27,8 @@
       },
       'Device',
       {
-        'description' => 'Select the output device to use ',
+        'description' => 'Select the output device to use 
+Device=/dev/cua01',
         'type' => 'leaf',
         'upstream_default' => '/dev/ttyS1',
         'value_type' => 'uniline'

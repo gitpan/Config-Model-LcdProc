@@ -1,7 +1,7 @@
 #
 # This file is part of Config-Model-LcdProc
 #
-# This software is Copyright (c) 2013 by Dominique Dumont.
+# This software is Copyright (c) 2014 by Dominique Dumont.
 #
 # This is free software, licensed under:
 #
@@ -22,6 +22,18 @@ zero slows down each write by one microsecond. ',
         'upstream_default' => '1',
         'value_type' => 'integer'
       },
+      'HaveInverter',
+      {
+        'description' => 'The original wiring used an inverter to drive the control lines. If you do
+not use an inverter set haveInverter to no. ',
+        'type' => 'leaf',
+        'upstream_default' => 'yes',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
+        ]
+      },
       'InterfaceType',
       {
         'choice' => [
@@ -35,6 +47,19 @@ zero slows down each write by one microsecond. ',
         'upstream_default' => '80',
         'value_type' => 'enum'
       },
+      'InvertedMapping',
+      {
+        'description' => 'On some displays column data in memory is mapped to segment lines from right
+to left. This is called inverted mapping (not to be confused with
+\'haveInverter\' from above). ',
+        'type' => 'leaf',
+        'upstream_default' => 'no',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
+        ]
+      },
       'Port',
       {
         'default' => '0x378',
@@ -42,12 +67,12 @@ zero slows down each write by one microsecond. ',
         'type' => 'leaf',
         'value_type' => 'uniline'
       },
-      'haveInverter',
+      'UseHardReset',
       {
-        'description' => 'The original wiring used an inverter to drive the control lines. If you do
-not use an inverter set haveInverter to no. ',
+        'description' => 'At least one display is reported (Everbouquet MG1203D) that requires sending
+three times 0xFF before a reset during initialization.',
         'type' => 'leaf',
-        'upstream_default' => 'yes',
+        'upstream_default' => 'no',
         'value_type' => 'boolean',
         'write_as' => [
           'no',

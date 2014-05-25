@@ -4,10 +4,6 @@
 
 Config::Model::models::LCDd::glcdlib - Configuration class LCDd::glcdlib
 
-=head1 VERSION
-
-version 2.041
-
 =head1 DESCRIPTION
 
 Configuration classes used by L<Config::Model>
@@ -100,3 +96,4 @@ L<cme>
 =back
 
 =cut
+

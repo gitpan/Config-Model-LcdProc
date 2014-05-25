@@ -1,7 +1,7 @@
 #
 # This file is part of Config-Model-LcdProc
 #
-# This software is Copyright (c) 2013 by Dominique Dumont.
+# This software is Copyright (c) 2014 by Dominique Dumont.
 #
 # This is free software, licensed under:
 #
@@ -51,7 +51,7 @@ compiled with additional charmaps)',
       'ConnectionType',
       {
         'default' => '4bit',
-        'description' => 'Select what type of connection. See documentation for types.',
+        'description' => 'Select what type of connection. See documentation for availabe types.',
         'type' => 'leaf',
         'value_type' => 'uniline'
       },
@@ -84,15 +84,19 @@ to increase the delays. Default: 1.',
       },
       'Device',
       {
-        'description' => 'Device of the serial interface ',
+        'description' => 'Device of the serial, I2C, or SPI interface ',
         'type' => 'leaf',
         'upstream_default' => '/dev/lcd',
         'value_type' => 'uniline'
       },
       'ExtendedMode',
       {
-        'description' => 'If you have an HD66712, a KS0073 or another \'almost HD44780-compatible\',
-set this flag to get into extended mode (4-line linear).',
+        'description' => 'If you have an HD66712, a KS0073 or another controller with \'extended mode\',
+set this flag to get into 4-line mode. On displays with just two lines, do
+not set this flag.
+As an additional restriction, controllers with and without extended mode
+AND 4 lines cannot be mixed for those connection types that support more
+than one display!',
         'type' => 'leaf',
         'upstream_default' => 'yes',
         'value_type' => 'uniline'
@@ -184,7 +188,8 @@ be able to control it with the lcdproc OUTPUT command',
       'Port',
       {
         'default' => '0x378',
-        'description' => 'Port where the LPT is. Usual value are: 0x278, 0x378 and 0x3BC',
+        'description' => 'I/O address of the LPT port. Usual values are: 0x278, 0x378 and 0x3BC.
+For I2C connections this sets the slave address (usually 0x20).',
         'type' => 'leaf',
         'value_type' => 'uniline'
       },

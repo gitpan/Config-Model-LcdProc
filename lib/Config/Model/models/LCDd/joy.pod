@@ -4,10 +4,6 @@
 
 Config::Model::models::LCDd::joy - Configuration class LCDd::joy
 
-=head1 VERSION
-
-version 2.041
-
 =head1 DESCRIPTION
 
 Configuration classes used by L<Config::Model>
@@ -55,3 +51,4 @@ L<cme>
 =back
 
 =cut
+

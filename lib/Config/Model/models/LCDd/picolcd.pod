@@ -4,10 +4,6 @@
 
 Config::Model::models::LCDd::picolcd - Configuration class LCDd::picolcd
 
-=head1 VERSION
-
-version 2.041
-
 =head1 DESCRIPTION
 
 Configuration classes used by L<Config::Model>
@@ -91,9 +87,10 @@ Link the key lights to the backlight? I<< Optional. Type boolean. upstream_defau
 
 =head2 LircFlushThreshold
 
-Threshold in jiffies of synthesized gap that triggers flushing the IR data
+Threshold in microseconds of the gap that triggers flushing the IR data
 to lirc 
-100 means 6.1ms. legal: 16 - 32767; Use 0 to disable.I<< Optional. Type integer. upstream_default: '100'.  >> 
+If LircTime_us is on values greater than 32.767ms will disable the flush
+If LircTime_us is off values greater than 1.999938s will disable the flush. I<< Optional. Type integer. upstream_default: '8000'.  >> 
 
 =head2 LircHost
 
@@ -103,6 +100,12 @@ If not set, or set to an empty value, IR support is disabled.I<< Optional. Type 
 =head2 LircPort
 
 UDP port on which LIRC is listening I<< Optional. Type integer. upstream_default: '8765'.  >> 
+
+=head2 LircTime_us
+
+UDP data time unit for LIRC  
+On:  times sent in microseconds (requires LIRC UDP driver that accepts this).
+Off: times sent in 'jiffies' (1/16384s) (supported by standard LIRC UDP driver).I<< Optional. Type boolean. upstream_default: 'off'.  >> 
 
 =head2 OffBrightness
 
@@ -120,3 +123,4 @@ L<cme>
 =back
 
 =cut
+

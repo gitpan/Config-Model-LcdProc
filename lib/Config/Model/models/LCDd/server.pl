@@ -1,7 +1,7 @@
 #
 # This file is part of Config-Model-LcdProc
 #
-# This software is Copyright (c) 2013 by Dominique Dumont.
+# This software is Copyright (c) 2014 by Dominique Dumont.
 #
 # This is free software, licensed under:
 #
@@ -40,9 +40,9 @@ backlight for its own screens (only). ',
       },
       'Bind',
       {
-        'default' => '127.0.0.1',
-        'description' => 'Tells the driver to bind to the given interface',
+        'description' => 'Tells the driver to bind to the given interface. ',
         'type' => 'leaf',
+        'upstream_default' => '127.0.0.1',
         'value_type' => 'uniline'
       },
       'Driver',
@@ -80,6 +80,7 @@ backlight for its own screens (only). ',
           'NoritakeVFD',
           'picolcd',
           'pyramid',
+          'rawserial',
           'sdeclcd',
           'sed1330',
           'sed1520',
@@ -104,12 +105,12 @@ The latter one can be changed by giving a File= directive in the
 driver specific section.
 
 The following drivers are supported:
-  bayrad, CFontz, CFontzPacket, curses, CwLnx, ea65,
-  EyeboxOne, g15, glcd, glcdlib, glk, hd44780, icp_a106, imon, imonlcd,
-  IOWarrior, irman, joy, lb216, lcdm001, lcterm, lirc, lis, MD8800,
-  mdm166a, ms6931, mtc_s16209x, MtxOrb, mx5000, NoritakeVFD, picolcd,
-  pyramid, sdeclcd, sed1330, sed1520, serialPOS, serialVFD, shuttleVFD, sli,
-  stv5730, svga, t6963, text, tyan, ula200, vlsys_m428, xosd',
+  bayrad, CFontz, CFontzPacket, curses, CwLnx, ea65, EyeboxOne, g15, glcd,
+  glcdlib, glk, hd44780, icp_a106, imon, imonlcd,, IOWarrior, irman, joy,
+  lb216, lcdm001, lcterm, lirc, lis, MD8800,, mdm166a, ms6931, mtc_s16209x,
+  MtxOrb, mx5000, NoritakeVFD, picolcd,, pyramid, rawserial, sdeclcd,
+  sed1330, sed1520, serialPOS, serialVFD, shuttleVFD, sli,, stv5730, svga,
+  t6963, text, tyan, ula200, vlsys_m428, xosd',
         'type' => 'leaf',
         'value_type' => 'enum'
       },
@@ -128,14 +129,10 @@ NOTE: Always place a slash as last character !',
       },
       'Foreground',
       {
-        'description' => 'The server will stay in the foreground if set to true .',
+        'description' => 'The server will stay in the foreground if set to yes.',
         'type' => 'leaf',
-        'upstream_default' => 'no',
-        'value_type' => 'boolean',
-        'write_as' => [
-          'no',
-          'yes'
-        ]
+        'upstream_default' => 'no,legal:yes,no',
+        'value_type' => 'uniline'
       },
       'GoodBye',
       {
@@ -174,9 +171,9 @@ heartbeat for its own screens (only). ',
       },
       'Port',
       {
-        'default' => '13666',
-        'description' => 'Listen on this specified port; defaults to 13666.',
+        'description' => 'Listen on this specified port. ',
         'type' => 'leaf',
+        'upstream_default' => '13666',
         'value_type' => 'integer'
       },
       'PrevScreenKey',
@@ -187,14 +184,16 @@ heartbeat for its own screens (only). ',
       },
       'ReportLevel',
       {
-        'description' => 'Sets the reporting level;  (warnings and errors only).',
+        'description' => 'Sets the reporting level; defaults to warnings and errors only.',
+        'max' => '5',
+        'min' => '0',
         'type' => 'leaf',
         'upstream_default' => '2',
         'value_type' => 'integer'
       },
       'ReportToSyslog',
       {
-        'description' => 'Should we report to syslog instead of stderr ? ',
+        'description' => 'Should we report to syslog instead of stderr? ',
         'type' => 'leaf',
         'upstream_default' => 'no',
         'value_type' => 'boolean',
@@ -253,17 +252,17 @@ are the defaults:',
       },
       'User',
       {
-        'default' => 'nobody',
-        'description' => 'User to run as.  LCDd will drop its root privileges, if any,
-and run as this user instead.',
+        'description' => 'User to run as.  LCDd will drop its root privileges and run as this user
+instead. ',
         'type' => 'leaf',
+        'upstream_default' => 'nobody',
         'value_type' => 'uniline'
       },
       'WaitTime',
       {
-        'default' => '5',
-        'description' => 'Sets the default time in seconds to displays a screen.',
+        'description' => 'Sets the default time in seconds to displays a screen. ',
         'type' => 'leaf',
+        'upstream_default' => '4',
         'value_type' => 'integer'
       }
     ],

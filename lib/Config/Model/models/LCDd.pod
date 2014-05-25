@@ -4,10 +4,6 @@
 
 Config::Model::models::LCDd - Configuration class LCDd
 
-=head1 VERSION
-
-version 2.041
-
 =head1 DESCRIPTION
 
 Configuration classes used by L<Config::Model>
@@ -188,6 +184,10 @@ I<< Optional. Type warped_node of class L<LCDd::picolcd|Config::Model::models::L
 =head2 pyramid
 
 I<< Optional. Type warped_node of class L<LCDd::pyramid|Config::Model::models::LCDd::pyramid> .  >> 
+
+=head2 rawserial
+
+I<< Optional. Type warped_node of class L<LCDd::rawserial|Config::Model::models::LCDd::rawserial> .  >> 
 
 =head2 sdeclcd
 
@@ -399,6 +399,10 @@ L<Config::Model::models::LCDd::pyramid>
 
 =item *
 
+L<Config::Model::models::LCDd::rawserial>
+
+=item *
+
 L<Config::Model::models::LCDd::sdeclcd>
 
 =item *
@@ -484,3 +488,4 @@ L<Config::Model::models::LCDd::xosd>
 =back
 
 =cut
+

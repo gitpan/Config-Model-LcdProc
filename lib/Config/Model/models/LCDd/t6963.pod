@@ -4,10 +4,6 @@
 
 Config::Model::models::LCDd::t6963 - Configuration class LCDd::t6963
 
-=head1 VERSION
-
-version 2.041
-
 =head1 DESCRIPTION
 
 Configuration classes used by L<Config::Model>
@@ -22,7 +18,7 @@ Clear graphic memory on start-up. I<< Optional. Type boolean. upstream_default: 
 
 =head2 Port
 
-port to use I<< Optional. Type uniline. upstream_default: '0x378'.  >> 
+port to use legal: 0x200-0x400 I<< Optional. Type uniline. upstream_default: '0x378'.  >> 
 
 =head2 Size
 
@@ -48,3 +44,4 @@ L<cme>
 =back
 
 =cut
+

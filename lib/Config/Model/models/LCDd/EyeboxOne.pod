@@ -4,10 +4,6 @@
 
 Config::Model::models::LCDd::EyeboxOne - Configuration class LCDd::EyeboxOne
 
-=head1 VERSION
-
-version 2.041
-
 =head1 DESCRIPTION
 
 Configuration classes used by L<Config::Model>
@@ -26,7 +22,8 @@ Switch on the cursor? I<< Optional. Type uniline. upstream_default: 'no'.  >>
 
 =head2 Device
 
-Select the output device to use I<< Optional. Type uniline. upstream_default: '/dev/ttyS1'.  >> 
+Select the output device to use 
+Device=/dev/cua01. I<< Optional. Type uniline. upstream_default: '/dev/ttyS1'.  >> 
 
 =head2 DownKey
 
@@ -75,3 +72,4 @@ L<cme>
 =back
 
 =cut
+

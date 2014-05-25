@@ -4,10 +4,6 @@
 
 Config::Model::models::LCDd::server - Configuration class LCDd::server
 
-=head1 VERSION
-
-version 2.041
-
 =head1 DESCRIPTION
 
 Configuration classes used by L<Config::Model>
@@ -30,7 +26,7 @@ backlight for its own screens (only). I<< Optional. Type enum. choice: 'off', 'o
 
 =head2 Bind
 
-Tells the driver to bind to the given interface. I<< Optional. Type uniline. default: '127.0.0.1'.  >> 
+Tells the driver to bind to the given interface. I<< Optional. Type uniline. upstream_default: '127.0.0.1'.  >> 
 
 =head2 Driver
 
@@ -42,12 +38,12 @@ The latter one can be changed by giving a File= directive in the
 driver specific section.
 
 The following drivers are supported:
-  bayrad, CFontz, CFontzPacket, curses, CwLnx, ea65,
-  EyeboxOne, g15, glcd, glcdlib, glk, hd44780, icp_a106, imon, imonlcd,
-  IOWarrior, irman, joy, lb216, lcdm001, lcterm, lirc, lis, MD8800,
-  mdm166a, ms6931, mtc_s16209x, MtxOrb, mx5000, NoritakeVFD, picolcd,
-  pyramid, sdeclcd, sed1330, sed1520, serialPOS, serialVFD, shuttleVFD, sli,
-  stv5730, svga, t6963, text, tyan, ula200, vlsys_m428, xosd. I<< Optional. Type enum. choice: 'bayrad', 'CFontz', 'CFontzPacket', 'curses', 'CwLnx', 'ea65', 'EyeboxOne', 'g15', 'glcd', 'glcdlib', 'glk', 'hd44780', 'icp_a106', 'imon', 'imonlcd', 'IOWarrior', 'irman', 'joy', 'lb216', 'lcdm001', 'lcterm', 'lirc', 'lis', 'MD8800', 'mdm166a', 'ms6931', 'mtc_s16209x', 'MtxOrb', 'mx5000', 'NoritakeVFD', 'picolcd', 'pyramid', 'sdeclcd', 'sed1330', 'sed1520', 'serialPOS', 'serialVFD', 'shuttleVFD', 'sli', 'stv5730', 'svga', 't6963', 'text', 'tyan', 'ula200', 'vlsys_m428', 'xosd'.  >> 
+  bayrad, CFontz, CFontzPacket, curses, CwLnx, ea65, EyeboxOne, g15, glcd,
+  glcdlib, glk, hd44780, icp_a106, imon, imonlcd,, IOWarrior, irman, joy,
+  lb216, lcdm001, lcterm, lirc, lis, MD8800,, mdm166a, ms6931, mtc_s16209x,
+  MtxOrb, mx5000, NoritakeVFD, picolcd,, pyramid, rawserial, sdeclcd,
+  sed1330, sed1520, serialPOS, serialVFD, shuttleVFD, sli,, stv5730, svga,
+  t6963, text, tyan, ula200, vlsys_m428, xosd. I<< Optional. Type enum. choice: 'bayrad', 'CFontz', 'CFontzPacket', 'curses', 'CwLnx', 'ea65', 'EyeboxOne', 'g15', 'glcd', 'glcdlib', 'glk', 'hd44780', 'icp_a106', 'imon', 'imonlcd', 'IOWarrior', 'irman', 'joy', 'lb216', 'lcdm001', 'lcterm', 'lirc', 'lis', 'MD8800', 'mdm166a', 'ms6931', 'mtc_s16209x', 'MtxOrb', 'mx5000', 'NoritakeVFD', 'picolcd', 'pyramid', 'rawserial', 'sdeclcd', 'sed1330', 'sed1520', 'serialPOS', 'serialVFD', 'shuttleVFD', 'sli', 'stv5730', 'svga', 't6963', 'text', 'tyan', 'ula200', 'vlsys_m428', 'xosd'.  >> 
 
 =head2 DriverPath
 
@@ -60,7 +56,7 @@ NOTE: Always place a slash as last character !I<< Optional. Type uniline. defaul
 
 =head2 Foreground
 
-The server will stay in the foreground if set to true .I<< Optional. Type boolean. upstream_default: 'no'.  >> 
+The server will stay in the foreground if set to yes.I<< Optional. Type uniline. upstream_default: 'no,legal:yes,no'.  >> 
 
 =head2 GoodBye
 
@@ -81,7 +77,7 @@ I<< Optional. Type uniline. default: 'Right'.  >>
 
 =head2 Port
 
-Listen on this specified port; defaults to 13666.I<< Optional. Type integer. default: '13666'.  >> 
+Listen on this specified port. I<< Optional. Type integer. upstream_default: '13666'.  >> 
 
 =head2 PrevScreenKey
 
@@ -89,11 +85,11 @@ I<< Optional. Type uniline. default: 'Left'.  >>
 
 =head2 ReportLevel
 
-Sets the reporting level;  (warnings and errors only).I<< Optional. Type integer. upstream_default: '2'.  >> 
+Sets the reporting level; defaults to warnings and errors only.I<< Optional. Type integer. upstream_default: '2'.  >> 
 
 =head2 ReportToSyslog
 
-Should we report to syslog instead of stderr ? I<< Optional. Type boolean. upstream_default: 'no'.  >> 
+Should we report to syslog instead of stderr? I<< Optional. Type boolean. upstream_default: 'no'.  >> 
 
 =head2 ScrollDownKey
 
@@ -125,12 +121,12 @@ are the defaults:I<< Optional. Type uniline. default: 'Enter'.  >>
 
 =head2 User
 
-User to run as.  LCDd will drop its root privileges, if any,
-and run as this user instead.I<< Optional. Type uniline. default: 'nobody'.  >> 
+User to run as.  LCDd will drop its root privileges and run as this user
+instead. I<< Optional. Type uniline. upstream_default: 'nobody'.  >> 
 
 =head2 WaitTime
 
-Sets the default time in seconds to displays a screen.I<< Optional. Type integer. default: '5'.  >> 
+Sets the default time in seconds to displays a screen. I<< Optional. Type integer. upstream_default: '4'.  >> 
 
 =head1 SEE ALSO
 
@@ -143,3 +139,4 @@ L<cme>
 =back
 
 =cut
+

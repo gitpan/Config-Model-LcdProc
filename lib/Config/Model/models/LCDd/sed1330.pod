@@ -4,10 +4,6 @@
 
 Config::Model::models::LCDd::sed1330 - Configuration class LCDd::sed1330
 
-=head1 VERSION
-
-version 2.041
-
 =head1 DESCRIPTION
 
 Configuration classes used by L<Config::Model>
@@ -18,7 +14,7 @@ generated from LCDd.conf
 
 =head2 CellSize
 
-Width x Height of a character cell in pixels I<< Optional. Type uniline. upstream_default: '6x10'.  >> 
+Width x Height of a character cell in pixels legal: 6x7-8x16 I<< Optional. Type uniline. upstream_default: '6x10'.  >> 
 
 =head2 ConnectionType
 
@@ -44,3 +40,4 @@ L<cme>
 =back
 
 =cut
+

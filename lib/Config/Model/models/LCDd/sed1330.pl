@@ -1,7 +1,7 @@
 #
 # This file is part of Config-Model-LcdProc
 #
-# This software is Copyright (c) 2013 by Dominique Dumont.
+# This software is Copyright (c) 2014 by Dominique Dumont.
 #
 # This is free software, licensed under:
 #
@@ -13,7 +13,7 @@
     'element' => [
       'CellSize',
       {
-        'description' => 'Width x Height of a character cell in pixels ',
+        'description' => 'Width x Height of a character cell in pixels legal: 6x7-8x16 ',
         'type' => 'leaf',
         'upstream_default' => '6x10',
         'value_type' => 'uniline'

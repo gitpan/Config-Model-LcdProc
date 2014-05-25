@@ -1,7 +1,7 @@
 #
 # This file is part of Config-Model-LcdProc
 #
-# This software is Copyright (c) 2013 by Dominique Dumont.
+# This software is Copyright (c) 2014 by Dominique Dumont.
 #
 # This is free software, licensed under:
 #
@@ -24,7 +24,7 @@
       },
       'Port',
       {
-        'description' => 'port to use ',
+        'description' => 'port to use legal: 0x200-0x400 ',
         'type' => 'leaf',
         'upstream_default' => '0x378',
         'value_type' => 'uniline'

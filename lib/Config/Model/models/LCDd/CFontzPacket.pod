@@ -4,10 +4,6 @@
 
 Config::Model::models::LCDd::CFontzPacket - Configuration class LCDd::CFontzPacket
 
-=head1 VERSION
-
-version 2.041
-
 =head1 DESCRIPTION
 
 Configuration classes used by L<Config::Model>
@@ -74,3 +70,4 @@ L<cme>
 =back
 
 =cut
+

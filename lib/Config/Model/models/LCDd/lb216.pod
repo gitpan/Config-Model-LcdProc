@@ -4,10 +4,6 @@
 
 Config::Model::models::LCDd::lb216 - Configuration class LCDd::lb216
 
-=head1 VERSION
-
-version 2.041
-
 =head1 DESCRIPTION
 
 Configuration classes used by L<Config::Model>
@@ -43,3 +39,4 @@ L<cme>
 =back
 
 =cut
+

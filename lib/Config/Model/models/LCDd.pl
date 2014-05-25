@@ -1,7 +1,7 @@
 #
 # This file is part of Config-Model-LcdProc
 #
-# This software is Copyright (c) 2013 by Dominique Dumont.
+# This software is Copyright (c) 2014 by Dominique Dumont.
 #
 # This is free software, licensed under:
 #
@@ -558,6 +558,21 @@ This model does not support to load several drivers. Loading several drivers is 
         'level' => 'hidden',
         'rules' => [
           '$selected eq \'pyramid\'',
+          {
+            'level' => 'normal'
+          }
+        ],
+        'type' => 'warped_node'
+      },
+      'rawserial',
+      {
+        'config_class_name' => 'LCDd::rawserial',
+        'follow' => {
+          'selected' => '- server Driver'
+        },
+        'level' => 'hidden',
+        'rules' => [
+          '$selected eq \'rawserial\'',
           {
             'level' => 'normal'
           }

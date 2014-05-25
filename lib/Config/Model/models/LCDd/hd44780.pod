@@ -4,10 +4,6 @@
 
 Config::Model::models::LCDd::hd44780 - Configuration class LCDd::hd44780
 
-=head1 VERSION
-
-version 2.041
-
 =head1 DESCRIPTION
 
 Configuration classes used by L<Config::Model>
@@ -34,7 +30,7 @@ compiled with additional charmaps)I<< Optional. Type enum. choice: 'hd44780_defa
 
 =head2 ConnectionType
 
-Select what type of connection. See documentation for types.I<< Optional. Type uniline. default: '4bit'.  >> 
+Select what type of connection. See documentation for availabe types.I<< Optional. Type uniline. default: '4bit'.  >> 
 
 =head2 Contrast
 
@@ -54,12 +50,16 @@ to increase the delays. Default: 1.I<< Optional. Type uniline. upstream_default:
 
 =head2 Device
 
-Device of the serial interface I<< Optional. Type uniline. upstream_default: '/dev/lcd'.  >> 
+Device of the serial, I2C, or SPI interface I<< Optional. Type uniline. upstream_default: '/dev/lcd'.  >> 
 
 =head2 ExtendedMode
 
-If you have an HD66712, a KS0073 or another 'almost HD44780-compatible',
-set this flag to get into extended mode (4-line linear).I<< Optional. Type uniline. upstream_default: 'yes'.  >> 
+If you have an HD66712, a KS0073 or another controller with 'extended mode',
+set this flag to get into 4-line mode. On displays with just two lines, do
+not set this flag.
+As an additional restriction, controllers with and without extended mode
+AND 4 lines cannot be mixed for those connection types that support more
+than one display!I<< Optional. Type uniline. upstream_default: 'yes'.  >> 
 
 =head2 KeepAliveDisplay
 
@@ -114,7 +114,8 @@ be able to control it with the lcdproc OUTPUT command. I<< Optional. Type unilin
 
 =head2 Port
 
-Port where the LPT is. Usual value are: 0x278, 0x378 and 0x3BC. I<< Optional. Type uniline. default: '0x378'.  >> 
+I/O address of the LPT port. Usual values are: 0x278, 0x378 and 0x3BC.
+For I2C connections this sets the slave address (usually 0x20).I<< Optional. Type uniline. default: '0x378'.  >> 
 
 =head2 RefreshDisplay
 
@@ -147,3 +148,4 @@ L<cme>
 =back
 
 =cut
+

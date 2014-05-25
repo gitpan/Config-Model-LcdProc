@@ -1,7 +1,7 @@
 #
 # This file is part of Config-Model-LcdProc
 #
-# This software is Copyright (c) 2013 by Dominique Dumont.
+# This software is Copyright (c) 2014 by Dominique Dumont.
 #
 # This is free software, licensed under:
 #
@@ -103,7 +103,9 @@ to zero to completely turn off the backlight. ',
       },
       'Port',
       {
-        'description' => 't6963: Parallel port to use ',
+        'description' => '--- t6963 options ---
+Parallel port to use 
+legal: 0x200-0x400 ',
         'type' => 'leaf',
         'upstream_default' => '0x378',
         'value_type' => 'uniline'
@@ -111,14 +113,15 @@ to zero to completely turn off the backlight. ',
       'Size',
       {
         'description' => 'Width and height of the display in pixel. The supported sizes may depend on
-the ConnectionType. ',
+the ConnectionType. 
+legal: 1x1-640x480 ',
         'type' => 'leaf',
         'upstream_default' => '128x64',
         'value_type' => 'uniline'
       },
       'bidirectional',
       {
-        'description' => 't6963: Use LPT port in bi-directional mode. This should work on most LPT port
+        'description' => 'Use LPT port in bi-directional mode. This should work on most LPT port
 and is required for proper timing! ',
         'type' => 'leaf',
         'upstream_default' => 'yes',
@@ -130,7 +133,7 @@ and is required for proper timing! ',
       },
       'delayBus',
       {
-        'description' => 't6963: Insert additional delays into reads / writes. ',
+        'description' => 'Insert additional delays into reads / writes. ',
         'type' => 'leaf',
         'upstream_default' => 'no',
         'value_type' => 'boolean',
@@ -160,10 +163,29 @@ is recommended and can be fetched at http://corefonts.sf.net).',
         'upstream_default' => '/usr/local/lib/X11/fonts/TTF/andalemo.ttf',
         'value_type' => 'uniline'
       },
+      'picolcdgfx_Inverted',
+      {
+        'choice' => [
+          'yesorno'
+        ],
+        'description' => 'Inverted: Inverts the pixels. ',
+        'type' => 'leaf',
+        'upstream_default' => 'no',
+        'value_type' => 'enum'
+      },
+      'picolcdgfx_KeyTimeout',
+      {
+        'description' => '--- picolcdgfx options ---
+Time in ms for usb_read to wait on a key press. ',
+        'min' => '0',
+        'type' => 'leaf',
+        'upstream_default' => '125',
+        'value_type' => 'integer'
+      },
       'serdisp_device',
       {
         'default' => '/dev/ppi0',
-        'description' => 'serdisplib: The display device to use, e.g. serraw:/dev/ttyS0,
+        'description' => 'The display device to use, e.g. serraw:/dev/ttyS0,
 parport:/dev/parport0 or USB:07c0/1501.',
         'type' => 'leaf',
         'value_type' => 'uniline'
@@ -171,14 +193,15 @@ parport:/dev/parport0 or USB:07c0/1501.',
       'serdisp_name',
       {
         'default' => 't6963',
-        'description' => 'serdisplib: Name of the underlying serdisplib driver, e.g. ctinclud. See
+        'description' => '--- serdisplib options ---
+Name of the underlying serdisplib driver, e.g. ctinclud. See
 serdisplib documentation for details.',
         'type' => 'leaf',
         'value_type' => 'uniline'
       },
       'serdisp_options',
       {
-        'description' => 'serdisplib: Options string to pass to serdisplib during initialization. Use
+        'description' => 'Options string to pass to serdisplib during initialization. Use
 this to set any display related options (e.g. wiring). The display size is
 always set based on the Size configured above! By default, no options are
 set.
@@ -198,6 +221,47 @@ to turn if off intentionally. ',
           'no',
           'yes'
         ]
+      },
+      'x11_BacklightColor',
+      {
+        'description' => 'BacklightColor: The color of the backlight as full brightness.',
+        'type' => 'leaf',
+        'upstream_default' => '0x80FF80',
+        'value_type' => 'uniline'
+      },
+      'x11_Border',
+      {
+        'description' => 'Border: Adds a border (empty space) around the LCD portion of X11 window.',
+        'type' => 'leaf',
+        'upstream_default' => '20',
+        'value_type' => 'uniline'
+      },
+      'x11_Inverted',
+      {
+        'description' => 'Inverted: inverts the pixels ',
+        'type' => 'leaf',
+        'upstream_default' => 'no',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'no',
+          'yes'
+        ]
+      },
+      'x11_PixelColor',
+      {
+        'description' => 'Colors are in RRGGBB format prefixed with "0x".
+PixelColor: The color of each dot at full contrast. ',
+        'type' => 'leaf',
+        'upstream_default' => '0x000000',
+        'value_type' => 'uniline'
+      },
+      'x11_PixelSize',
+      {
+        'description' => '--- x11 options ---
+PixelSize is size of each dot in pixels + a pixel gap. ',
+        'type' => 'leaf',
+        'upstream_default' => '3+1',
+        'value_type' => 'uniline'
       }
     ],
     'name' => 'LCDd::glcd'

@@ -1,7 +1,7 @@
 #
 # This file is part of Config-Model-LcdProc
 #
-# This software is Copyright (c) 2013 by Dominique Dumont.
+# This software is Copyright (c) 2014 by Dominique Dumont.
 #
 # This is free software, licensed under:
 #
@@ -149,12 +149,13 @@ and a balanced value. ',
       },
       'LircFlushThreshold',
       {
-        'description' => 'Threshold in jiffies of synthesized gap that triggers flushing the IR data
+        'description' => 'Threshold in microseconds of the gap that triggers flushing the IR data
 to lirc 
-100 means 6.1ms. legal: 16 - 32767; Use 0 to disable.',
-        'max' => '32767',
+If LircTime_us is on values greater than 32.767ms will disable the flush
+If LircTime_us is off values greater than 1.999938s will disable the flush',
+        'min' => '1000',
         'type' => 'leaf',
-        'upstream_default' => '100',
+        'upstream_default' => '8000',
         'value_type' => 'integer'
       },
       'LircHost',
@@ -173,6 +174,19 @@ If not set, or set to an empty value, IR support is disabled.',
         'type' => 'leaf',
         'upstream_default' => '8765',
         'value_type' => 'integer'
+      },
+      'LircTime_us',
+      {
+        'description' => 'UDP data time unit for LIRC  
+On:  times sent in microseconds (requires LIRC UDP driver that accepts this).
+Off: times sent in \'jiffies\' (1/16384s) (supported by standard LIRC UDP driver).',
+        'type' => 'leaf',
+        'upstream_default' => 'off',
+        'value_type' => 'boolean',
+        'write_as' => [
+          'off',
+          'on'
+        ]
       },
       'OffBrightness',
       {
